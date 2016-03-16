@@ -18,7 +18,7 @@ if ($ceros->num_rows > 0) {
     // output data of each row
     while($row = $ceros->fetch_assoc()) {
         echo "stock: " . $row["stock"]."<br>";
-		if($row["stock"]==2)
+		if($row["stock"]==5)
 		{echo $row["identifier"];}
     }
 } else {

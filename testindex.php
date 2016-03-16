@@ -188,9 +188,6 @@ if ($result->num_rows > 0) {
 }
 $conn->close();
 
-
-/* 	$last_id = $conn->insert_id;
-    echo "New record created successfully. Last inserted ID is: " . $last_id;	 */
 	
 
 if ($_SERVER["REQUEST_METHOD"] == "POST") {
@@ -202,7 +199,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 	$password = "projectcube";
 	$dbname = "project2";
 	$last_id = $conn->insert_id;
-    echo "New record created successfully. Last inserted ID is: " . $last_id;	
+    //echo "New record created successfully. Last inserted ID is: " . $last_id;	
 	
 	// Create connection
 	$conn = new mysqli($servername, $username, $password, $dbname);    
@@ -232,13 +229,6 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 	}	
 
 
-/* if ($conn->query($sql) === TRUE) {
-    $last_id = $conn->insert_id;
-    echo "New record created successfully. Last inserted ID is: " . $last_id;
-} else {
-    echo "Error: " . $sql . "<br>" . $conn->error;
-} */
-
 ?>
 <script type="text/javascript">
 window.location = "build.php";
@@ -264,26 +254,25 @@ function test_input($data) {
 
 <html>
   <head>
-    <title>Pass variable from PHP to JavaScript - Cyberster's Blog'</title>
   </head>
   <body>
     <script>
       //var js_var = "<?php echo $last_id; ?>";
 	  var js_var = <?php echo json_encode("$last_id"); ?>;
-        alert("js_var="+ js_var);
+       // alert("js_var="+ js_var);
     </script>
   </body>
 </html>
 
-<script>
+<!-- <script>
     var div = document.getElementById("dom-target");
     var myData = div.textContent;
-	alert("myData = " + myData);
-</script>
+	//alert("myData = " + myData);
+</script> */-->
 
  
 
-<h2>PHP Form Validation Example</h2>
+<!--<h2>PHP Form Validation</h2> -->
 <form method="post" action="<?php echo htmlspecialchars($_SERVER["PHP_SELF"]);?>"> 
    Name: <input type="text" name="name">
    <br><br>
@@ -296,11 +285,11 @@ function test_input($data) {
 
 <?php
 
-echo "<h2>Your Input:</h2>";
+/* echo "<h2>Your Input:</h2>";
 echo $name;
 echo "<br>";
 echo $email;
-echo "<br>";
+echo "<br>"; */
 
 
 ?>

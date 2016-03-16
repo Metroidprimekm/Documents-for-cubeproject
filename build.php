@@ -296,8 +296,7 @@ $conn->close();
 
     <script src="JavaScript/three.min.js"></script>
     <script src="JavaScript/OrbitControls.js"></script>
-    <script src="JavaScript/Jsonconverter.js"></script>
-		
+    <script src="JavaScript/Jsonconverter.js"></script>	
     <script src="JavaScript/renderfile.js"></script> 
 
     <br><br>

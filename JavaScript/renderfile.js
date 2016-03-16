@@ -58,7 +58,7 @@
 	var arrayBlockCounter = 0;
 	var div = document.getElementById("dom-target");
     var myData = div.textContent;
-	alert("myData="+myData);
+	//alert("myData="+myData);
 	var PHP_last_id_js = myData;//<?php echo $last_id; ?>;
 
 
@@ -81,8 +81,8 @@
 		this.Color = Color;
 		this.BlockType = BlockType;
 		this.PHP_last_id_block = PHP_last_id_js;
-		alert("Valor del id al crearse el objeto = " + PHP_last_id_js);
-		alert("Valor del id del objeto = " + this.PHP_last_id_block);
+		//("Valor del id al crearse el objeto = " + PHP_last_id_js);
+		//alert("Valor del id del objeto = " + this.PHP_last_id_block);
 	}
 
 	function inicio(){
@@ -1372,7 +1372,7 @@
 	
 	function Delall(){
 	var Reload = myData;
-	alert (myData);
+	//alert (myData);
 	// Create our XMLHttpRequest object
     var hr = new XMLHttpRequest();
     // Create some variables we need to send to our PHP file
@@ -1385,12 +1385,12 @@
     hr.onreadystatechange = function() {
 	    if(hr.readyState == 4 && hr.status == 200) {
 		    var return_data = hr.responseText;
-			document.getElementById("status").innerHTML = return_data;
+			//document.getElementById("status").innerHTML = return_data;
 	    }
     }
     // Send the data to PHP now... and wait for response to update the status div
     hr.send(vars); // Actually execute the request
-    document.getElementById("status").innerHTML = "processing...";
+    //document.getElementById("status").innerHTML = "processing...";
 	
 }
 		
@@ -1406,7 +1406,7 @@
 		  }
 		}	 
 
-		alert(blockToSend.LegoBlock.OrderID);
+		//alert(blockToSend.LegoBlock.OrderID);
 		var unbuilded = JXON.unbuild(blockToSend);
 		var oSerializer = new XMLSerializer();
 		var sXML = oSerializer.serializeToString(unbuilded);
@@ -1430,7 +1430,7 @@
 			}
 		}
 		// Send the data to PHP now... and wait for response to update the status div
-		alert(vars);
+		//alert(vars);
 		hr.send(vars); // Actually execute the request
 	   // document.getElementById("status").innerHTML = "processing...";
 
@@ -1484,16 +1484,13 @@
   
 	function ajaxReserveBlock(){
 		
-		var blockToReserv = {
-		  "LegoBlock": {
-			"PartCode":  arrayBlock[arrayBlockCounter].PartCode
-		  }
-		}	 
+	
+		var blockToReserv = arrayBlock[arrayBlockCounter].PartCode;	 
 
 		//alert(arrayBlock[arrayBlockCounter].PartCode);
-		var unbuilded = JXON.unbuild(blockToReserv);
-		var oSerializer = new XMLSerializer();
-		var sXML = oSerializer.serializeToString(unbuilded);
+		//var unbuilded = JXON.unbuild(BlockPart);
+		//var oSerializer = new XMLSerializer();
+		//var sXML = oSerializer.serializeToString(unbuilded);
 		//var array_demo = JSON.stringify(myCar);
 		//alert(sXML);
 		//ajax_post(sXML);
@@ -1502,7 +1499,7 @@
 		var hr = new XMLHttpRequest();
 		// Create some variables we need to send to our PHP file
 		var url = "ResStock.php";
-		var vars = "RestBlock="+sXML;
+		var vars = "RestBlock="+blockToReserv ;
 		hr.open("POST", url, true);
 		// Set content type header information for sending url encoded variables in the request
 		hr.setRequestHeader("Content-type", "application/x-www-form-urlencoded");
@@ -1540,7 +1537,7 @@
     //document.getElementById("status").innerHTML = "processing...";
 	
 }
-	
+
 
 	
 	$( "#render" ).droppable({
@@ -1548,7 +1545,7 @@
             
             drop: function( event, ui ) {
             	if (ui.draggable.is('#show_chasisR')){
-            		modelo_chasis(0Xff0000,6048907);
+            		modelo_chasis(0Xff0000,6048907);	
             	}
             	if (ui.draggable.is('#show_chasisA')){
             		modelo_chasis(0X0000ff,6048908);

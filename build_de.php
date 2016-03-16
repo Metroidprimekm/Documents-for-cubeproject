@@ -292,6 +292,7 @@ $conn->close();
 
     <script src="JavaScript/three.min.js"></script>
     <script src="JavaScript/OrbitControls.js"></script>
+    <script src="JavaScript/Jsonconverter.js"></script>
     <script src="JavaScript/renderfile.js"></script> 
 
 
@@ -299,6 +300,7 @@ $conn->close();
     <a onclick="izq = !izq;" href="#" ><span class="box1">Links</span></a>
     <a onclick="der = !der;" href="#"><span class="box1">Rechst</span></a>
     <a onclick="ok = !ok;" href="#"><span class="box1">Ok</span></a>
+	<a onclick="rem = !rem;" href="#"><span class="box1">Remove</span></a>
     <!-- <p id="demo"></p> -->
     <center><a id="next" href="#"><span class="box1">Weiter</span></a></center>    
   
