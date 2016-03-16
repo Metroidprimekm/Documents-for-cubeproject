@@ -1,7 +1,7 @@
 <?php
-if ($_POST['DeleteData']){
-	echo $_POST['DeleteData'];
-	$DATA = $_POST['DeleteData'];
+if ($_POST['RestBlock']){
+	echo $_POST['RestBlock'];
+	$DATA = $_POST['RestBlock'];
 	
 	$servername = "localhost";
 	$username = "root";

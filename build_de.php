@@ -23,7 +23,6 @@
 </head>
 <body>
 
-
 <div id="PAGE">
     <BUTTONBAR id="BUTTONBAR">
         <div id="language" title="Language">
@@ -103,7 +102,7 @@
      
       
         <div id="TOPNAV"><span id="hilfsnavi_topnavi" class="invisible"><a href="#hilfsnavi_sprachwahl">Top-Navigation &uuml;berspringen</a></span>
-            <a href="testindex.php" title="Home">Home</a><a href="kontakt/" title="Contact">Contact</a><a href="#" title="about us">About us</a>
+            <a href="index_de.html" title="Home">Home</a><a href="kontakt/" title="Contact">Kontact</a><a href="#" title="about us">&Uuml;ber uns</a>
         </div>
         <div id="LOGIN">    
             <a style="cursor:pointer" title="Öffnet die Login-Box" onclick="document.loginbutton.submit()">Login</a><form style="visibility:hidden" action="/" name="loginbutton" method="post"><input type="hidden" name="995F472B" value="2060A5A289FD684BAD2756C18F7E4393"><input type="hidden" name="login" value="1"></form>
@@ -120,7 +119,6 @@
     alert(text);
   }
 </script>
-
 
   </div>
   
@@ -146,14 +144,12 @@
         <div id="HEADNAV">
             <span id="hilfsnavi_headnavi" class="invisible"><a href="#hilfsnavi_navigation">Haupt-Navigation &uuml;berspringen</a></span>
             <!-- <div id="START" class="passiv"><a href="https://www1.fh-aachen.de" title="Startseite">Startseite</a></div> -->
-            <div class="passiv"><a href="testindex.php" title="Home" id="page_3" onmouseover="dropdown(3)" onmouseout="window.clearTimeout(drop)">Home icon</a></div><div class="passiv"><a href="fachbereiche/" title="Die Fachbereiche der FH Aachen" id="page_4" onmouseover="dropdown(4)" onmouseout="window.clearTimeout(drop)">About us</a></div><div class="passiv"><a href="hochschule/" title="Informationen zur FH Aachen" id="page_5" onmouseover="dropdown(5)" onmouseout="window.clearTimeout(drop)">Contact</a></div><div class="passiv"><a href="hochschule/zentralverwaltung/dezernat-v-innovationstransfer/" title="Informationen zu Forschungsprojekten der FH Aachen" id="page_6" onmouseover="dropdown(6)" onmouseout="window.clearTimeout(drop)">More</a></div>
+            <div class="passiv"><a href="index_de.html" title="Home" id="page_3" onmouseover="dropdown(3)" onmouseout="window.clearTimeout(drop)">Home icon</a></div><div class="passiv"><a href="fachbereiche/" title="Die Fachbereiche der FH Aachen" id="page_4" onmouseover="dropdown(4)" onmouseout="window.clearTimeout(drop)">&Uuml;ber uns</a></div><div class="passiv"><a href="hochschule/" title="Informationen zur FH Aachen" id="page_5" onmouseover="dropdown(5)" onmouseout="window.clearTimeout(drop)">Kontact</a></div><div class="passiv"><a href="hochschule/zentralverwaltung/dezernat-v-innovationstransfer/" title="Informationen zu Forschungsprojekten der FH Aachen" id="page_6" onmouseover="dropdown(6)" onmouseout="window.clearTimeout(drop)">More</a></div>
         </div>
        
     </div>
 
-
   <!--         Lo de la FH             -->
-
 
   <!-- Drag n Drop -->
   <link href="http://code.jquery.com/ui/1.10.4/themes/ui-lightness/jquery-ui.css" rel="stylesheet">
@@ -261,9 +257,10 @@
 
   </div>
   
-  <div id="dom-target" style="display: none;">
+  
+    <div id="dom-target" style="display: none;">
     <?php 
-
+	
 	$maximo=0;
 	$servername = "localhost";
 	$username = "root";
@@ -292,26 +289,19 @@ $conn->close();
 	
     ?>
 </div>
-  
 
     <script src="JavaScript/three.min.js"></script>
     <script src="JavaScript/OrbitControls.js"></script>
-    <script src="JavaScript/Jsonconverter.js"></script>
-		
     <script src="JavaScript/renderfile.js"></script> 
 
+
     <br><br>
-
-    <a onclick="izq = !izq;" href="#" ><span class="box1">Left</span></a>
-    <a onclick="der = !der;" href="#"><span class="box1">Right</span></a>
+    <a onclick="izq = !izq;" href="#" ><span class="box1">Links</span></a>
+    <a onclick="der = !der;" href="#"><span class="box1">Rechst</span></a>
     <a onclick="ok = !ok;" href="#"><span class="box1">Ok</span></a>
-	<a onclick="rem = !rem;" href="#"><span class="box1">Remove</span></a>
     <!-- <p id="demo"></p> -->
-    <center><a id="next" href="#" onclick="ajaxWriteXML();"><span class="box1">Next</span></a></center>
-	
-
-
-    
+    <center><a id="next" href="#"><span class="box1">Weiter</span></a></center>    
+  
 </body>
      <!-- El Drag n' Drop -->
       <script>
@@ -319,6 +309,7 @@ $conn->close();
             $( "#show_chasisR" ).draggable({ revert: true});
             $( "#show_chasisA" ).draggable({ revert: true});
             $( "#show_chasisV" ).draggable({ revert: true});
+
             $( "#show_body_2x2x2_R" ).draggable({ revert: true});
             $( "#show_body_2x2x2_A" ).draggable({ revert: true});
             $( "#show_body_2x4x1_A" ).draggable({ revert: true});
@@ -331,7 +322,10 @@ $conn->close();
             $( "#show_body_2x6_1_A" ).draggable({ revert: true});
             $( "#show_body_2x4x2_R" ).draggable({ revert: true});
             $( "#show_tanque" ).draggable({ revert: true});
+
             $("#show_techo_2x3x2_A").draggable({revert:true});
+
+
        $(function() {
           $('*[draggable!=true]','.slick-track').unbind('dragstart');
           $( ".draggable-element" ).draggable();
@@ -346,8 +340,8 @@ $conn->close();
   <script src="JavaScript/build.js"></script>
   <script >
   verify.addEventListener("click", function(){
-    if (confirm('Are you sure that this is the car of your dreams?')) {
-      window.location = "ending.html"; 
+    if (confirm('Sind Sie sicher, ob dieses Ihr Traumauto ist?')) {
+      window.location = "ending_de.html"; 
   }
   });
   </script>
@@ -402,9 +396,7 @@ $conn->close();
     imagen = Render.domElement.toDataURL("image/png");
     window.open(imagen);
     });
- 
+  });
   </script>
 
-<script>
-</script>
 </html>

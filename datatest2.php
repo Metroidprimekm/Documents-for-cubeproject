@@ -1,7 +1,7 @@
 <?php
 $servername = "localhost";
 $username = "root";
-$password = "projectcube2";
+$password = "projectcube";
 $dbname = "project2";
 
 // Create connection

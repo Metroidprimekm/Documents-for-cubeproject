@@ -57,9 +57,9 @@
 	var arrayBlock = [];
 	var arrayBlockCounter = 0;
 	var div = document.getElementById("dom-target");
-/*     var myData = div.textContent;
+    var myData = div.textContent;
 	alert("myData="+myData);
-	var PHP_last_id_js = myData;//<?php echo $last_id; ?>; */
+	var PHP_last_id_js = myData;//<?php echo $last_id; ?>;
 
 
 	function Block(PartCode, Type, Color, PosX, PosZ, objHeight, objLength){
@@ -1371,7 +1371,8 @@
 	}	
 	
 	function Delall(){
-	var Reload = 1;
+	var Reload = myData;
+	alert (myData);
 	// Create our XMLHttpRequest object
     var hr = new XMLHttpRequest();
     // Create some variables we need to send to our PHP file
@@ -1609,5 +1610,5 @@
 	
 	inicio();
 	animacion();	
-	//Delall();
+	Delall();
 	
