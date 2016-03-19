@@ -245,7 +245,9 @@
 
             function animateToPosition(animationOptions) {
                 running = true;
-
+				
+				var Partcode = 0;
+				
                 ul.animate(
                     animCss == "left" ?
                     { left: -(calculatedTo*liSize) } :
@@ -263,19 +265,93 @@
                 if (ulSize==800){
                     if (didi==0)didi=3;
                     if (didi==4)didi=1;
-                    document.getElementById("sch").value = didi;  //show it in display
+					switch(didi){
+						case 1:
+							Partcode = 6048907;
+							break;
+						case 2:
+							Partcode = 6048908;
+							break;
+						case 3:
+							Partcode = 6048909;
+							break;	
+					}
+                    document.getElementById("sch").value = getStock(Partcode);  //show it in display
                 }
 
                   if (ulSize==2240){
                     if (didi==0)didi=12;
                     if (didi==13)didi=1;
-                    document.getElementById("sby").value = didi;
+					switch(didi){
+						case 1:
+							Partcode = 343721;
+							break;
+						case 2:
+							Partcode = 343724;
+							break;
+						case 3:
+							Partcode = 4160152;
+							break;
+						case 4:
+							Partcode = 4166923;
+							break;
+						case 5:
+							Partcode = 4167177;
+							break;
+						case 6:
+							Partcode = 4168579;
+							break;
+						case 7:
+							Partcode = 4170797;
+							break;
+						case 8:
+							Partcode = 4183780;
+							break;
+						case 9:
+							Partcode = 4247780;
+							break;
+						case 10:
+							Partcode = 6023087;
+							break;
+						case 11:
+							Partcode = 301121;
+							break;
+						case 12:
+							Partcode = 14;
+							break;
+					}
+                    document.getElementById("sby").value = getStock(Partcode);;
                 }
 
                   if (ulSize==1600){
                     if (didi==0)didi=8;
                     if (didi==9)didi=1;
-                    document.getElementById("stc").value = didi;
+					switch(didi){
+						case 1:
+							Partcode = 4541728;
+							break;
+						case 2:
+							Partcode = 4652863;
+							break;
+						case 3:
+							Partcode = 6004947;
+							break;
+						case 4:
+							Partcode = 4166923;
+							break;
+						case 5:
+							Partcode = 6020150;
+							break;
+						case 6:
+							Partcode = 4168579;
+							break;
+						case 7:
+							Partcode = 4170797;
+							break;
+						case 8:
+							Partcode = 4183780;
+							break;
+                    document.getElementById("stc").value = getStock(Partcode);;
                 }
             }
         });
@@ -302,3 +378,25 @@
     };
 
 })(jQuery);
+
+
+function getStock(PartCodeToGet){
+		
+		var hr = new XMLHttpRequest();
+		// Create some variables we need to send to our PHP file
+		var url = "GetCode.php";
+		var vars = "GetCode="+PartCodeToGet ;
+		hr.open("POST", url, true);
+		// Set content type header information for sending url encoded variables in the request
+		hr.setRequestHeader("Content-type", "application/x-www-form-urlencoded");
+		// Access the onreadystatechange event for the XMLHttpRequest object
+		hr.onreadystatechange = function() {
+			if(hr.readyState == 4 && hr.status == 200) {
+				var return_data = hr.responseText;
+				//document.getElementById("status").innerHTML = return_data;
+			}
+		}
+		// Send the data to PHP now... and wait for response to update the status div
+		hr.send(vars); // Actually execute the request
+	   // document.getElementById("status").innerHTML = "processing...";
+  }
