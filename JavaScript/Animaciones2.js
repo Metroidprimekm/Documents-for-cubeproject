@@ -1,3 +1,4 @@
+
 (function($) {                                          // Compliant with jquery.noConflict()
     $.jCarouselLite = {
         version: '1.1'
@@ -143,15 +144,20 @@
 
             function attachEventHandlers() {
                 if(options.btnPrev) {
+                    
                     $(options.btnPrev).click(function() {
                         return go(calculatedTo - options.scroll);
+                     
                     });
                 }
 
                 if(options.btnNext) {
+                    
                     $(options.btnNext).click(function() {
                         return go(calculatedTo + options.scroll);
+                      
                     });
+
                 }
 
                 if(options.btnGo) {
@@ -159,6 +165,7 @@
                         $(val).click(function() {
                             return go(options.circular ? numVisible + i : i);
                         });
+                        
                     });
                 }
 
@@ -183,6 +190,7 @@
 
             function visibleItems() {
                 return li.slice(calculatedTo).slice(0,numVisible);
+                
             }
 
             function adjustOobForCircular(to) {
@@ -205,6 +213,7 @@
 
                     console.log("After - Positioned at: " + newPosition + " and Moving to: " + calculatedTo);
                 }
+                    
             }
 
             function adjustOobForNonCircular(to) {
@@ -247,6 +256,27 @@
                         easing: options.easing
                     }, animationOptions)
                 );
+
+                // Setting didi as the variable that says where exactly the carrousel is stoped at
+                didi=calculatedTo;     
+
+                if (ulSize==800){
+                    if (didi==0)didi=3;
+                    if (didi==4)didi=1;
+                    document.getElementById("sch").value = didi;  //show it in display
+                }
+
+                  if (ulSize==2240){
+                    if (didi==0)didi=12;
+                    if (didi==13)didi=1;
+                    document.getElementById("sby").value = didi;
+                }
+
+                  if (ulSize==1600){
+                    if (didi==0)didi=8;
+                    if (didi==9)didi=1;
+                    document.getElementById("stc").value = didi;
+                }
             }
         });
     };

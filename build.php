@@ -14,6 +14,11 @@
 <link rel="stylesheet" type="text/css" href="https://www.fh-aachen.de/typo3temp/stylesheet_0ade94ab98.css?1448379798" media="all" />
 <link rel="stylesheet" type="text/css" href="https://www.fh-aachen.de/fileadmin/template/css/fh.css?1450189426" media="all" />
 
+<!-- Variable of current position of the Carrousel -->
+<script type="text/javascript">
+var didi=1;
+</script>
+
     <!-- Bliss JS Libs -->
     <script src='JavaScript/Aminaciones.js'></script>
 
@@ -256,6 +261,15 @@
                 <div class="clear"></div>
             </div>
         </div>
+
+    <!-- Set of the stock boxes under de carrousel -->
+    </br></br></br></br></br></br></br></br></br>
+    
+    Stock:<input type="text" name="stock chasis" value="1" id="sch">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+    Stock:<input type="text" name="stock body" value="1" id="sby">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+    Stock:<input type="text" name="stock techo" value="1" id="stc">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+    Stock:<input type="text" name="stock special" value="1" id="ssp">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+
       </div>
     </center>
 
@@ -395,6 +409,7 @@ $conn->close();
        });
   </script>
 
+  <!-- Code which takes the screenshoot and saves the img in the variable "imagen" as a png image by clicking the button "Print" -->
   <script type="text/javascript">
   $('#printimg').click(function(){
     var imagen;

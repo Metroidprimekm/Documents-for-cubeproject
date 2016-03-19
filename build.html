@@ -13,7 +13,9 @@
 
 <link rel="stylesheet" type="text/css" href="https://www.fh-aachen.de/typo3temp/stylesheet_0ade94ab98.css?1448379798" media="all" />
 <link rel="stylesheet" type="text/css" href="https://www.fh-aachen.de/fileadmin/template/css/fh.css?1450189426" media="all" />
-
+<script type="text/javascript">
+var didi=1;
+</script>
     <!-- Bliss JS Libs -->
     <script src='JavaScript/Aminaciones.js'></script>
 
@@ -47,6 +49,7 @@
     </BUTTONBAR>
     <div ID="HEADER">
         <script type="text/javascript">
+
             function dropdown(ID) {
                 drop=window.setTimeout("dropaktiv("+ID+")", 1000);
             }
@@ -112,6 +115,7 @@
   <div class="tx-felogin-pi1">
     
 <script language="javascript">
+
   if ("<div></div>">"" && "<div></div>"!="<div></div>") {
     text="<div></div>";
     text=text.substr(5);
@@ -189,6 +193,7 @@
                     <div class="clear"></div>
                 </div>
             </div>
+
         
         <div id="jcl-demo" class="entry-content">
             <div class="custom-container mainbody">
@@ -253,10 +258,22 @@
                     </ul>
                 </div>
                 <a href="#" class="next">&rsaquo;</a>
-                <div class="clear"></div>
+                <div class="clear"></div> 
+
             </div>
+            
         </div>
+
+        <!-- Set of the stock boxes under de carrousel -->
+</br></br></br></br></br></br></br></br></br>
+    
+    Stock:<input type="text" name="stock chasis" value="1" id="sch">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+    Stock:<input type="text" name="stock body" value="1" id="sby">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+    Stock:<input type="text" name="stock techo" value="1" id="stc">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+    Stock:<input type="text" name="stock special" value="" id="ssp">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
       </div>
+
+      
     </center>
 
   </div>
@@ -360,11 +377,13 @@ $conn->close();
           speed: 500,
           visible: 1
         });
+      
        });
   </script>
 
   <script>
     $(function() {
+
       $(".mainbody .carousel").jCarouselLite({
           btnNext: ".mainbody .next",
           btnPrev: ".mainbody .prev",
@@ -382,6 +401,7 @@ $conn->close();
           speed: 500,
           visible: 1
         });
+
        });
   </script>
 
@@ -396,6 +416,7 @@ $conn->close();
        });
   </script>
 
+<!-- Code which takes the screenshoot and saves the img in the variable "imagen" as a png image by clicking the button "Print" -->
   <script type="text/javascript">
   $('#printimg').click(function(){
     var imagen;
