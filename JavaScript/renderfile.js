@@ -1538,7 +1538,7 @@
 	
 }
 
-
+var kaka=1;
 	
 	$( "#render" ).droppable({
             tolerance: 'touch',
@@ -1546,6 +1546,7 @@
             drop: function( event, ui ) {
             	if (ui.draggable.is('#show_chasisR')){
             		modelo_chasis(0Xff0000,6048907);	
+            		document.getElementById("sch").value = 'tonto';
             	}
             	if (ui.draggable.is('#show_chasisA')){
             		modelo_chasis(0X0000ff,6048908);
