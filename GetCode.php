@@ -1,9 +1,11 @@
-<?php
+ <?php 
 	$servername = "localhost";
 	$username = "root";
 	$password = "projectcube";
 	$dbname = "project2";
-    $stock = 6050965;
+	alert($GetCode);
+    $stock = $GetCode;
+	
 // Create connection
 $conn = new mysqli($servername, $username, $password, $dbname);
 // Check connection
@@ -17,12 +19,17 @@ $ceros = $conn->query($sql);
 if ($ceros->num_rows > 0) {
     // output data of each row
     while($row = $ceros->fetch_assoc()) {
+		
 		if($row["identifier"]== $stock)
-		{echo $row["stock"]."<br>";}
+		{echo $row["stock"]."<br>";
+	    break;
+
+	    }
+	
     }
+	
 } else {
     echo "0 results";
 }
 $conn->close();
-?>
-
+    ?>
