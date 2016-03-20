@@ -351,6 +351,7 @@
 						case 8:
 							Partcode = 4183780;
 							break;
+					}
                     document.getElementById("stc").value = getStock(Partcode);;
                 }
             }

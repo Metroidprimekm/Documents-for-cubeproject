@@ -1546,7 +1546,7 @@ var kaka=1;
             drop: function( event, ui ) {
             	if (ui.draggable.is('#show_chasisR')){
             		modelo_chasis(0Xff0000,6048907);	
-            		document.getElementById("sch").value = 'tonto';
+            		document.getElementById("sch").value = getStock(6048907);
             	}
             	if (ui.draggable.is('#show_chasisA')){
             		modelo_chasis(0X0000ff,6048908);
