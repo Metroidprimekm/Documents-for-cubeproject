@@ -265,7 +265,7 @@ var didi=1;
     <!-- Set of the stock boxes under de carrousel -->
     </br></br></br></br></br></br></br></br></br>
     
-    Stock:<input type="text" name="stock chasis" value=getStock2(6048907); id="sch">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+    Stock:<input type="text" name="stock chasis" value= getStock2(6048907); "id="sch">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
     Stock:<input type="text" name="stock body" value=getStock2(6048908); id="sby">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
     Stock:<input type="text" name="stock techo" value=getStock2(4541728); id="stc">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
     Stock:<input type="text" name="stock special" value="1" id="ssp">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
@@ -326,7 +326,47 @@ $conn->close();
 	
     ?>
 </div>
-  
+
+ <div id="dom-target2" style="display: none;">
+  <?php 
+
+	$stock = 6048907;
+	
+	$servername = "localhost";
+	$username = "root";
+	$password = "projectcube";
+	$dbname = "project2";
+
+	
+// Create connection
+$conn = new mysqli($servername, $username, $password, $dbname);
+// Check connection
+if ($conn->connect_error) {
+    die("Connection failed: " . $conn->connect_error);
+} 
+
+$sql = "SELECT stock,identifier FROM Brick";
+$ceros = $conn->query($sql);
+
+if ($ceros->num_rows > 0) {
+    // output data of each row
+    while($row = $ceros->fetch_assoc()) {
+		
+		if($row["identifier"]== $stock)
+		{echo $row["stock"];
+	    break;
+	    }
+	
+    }
+	
+} else {
+    echo "0 results";
+}
+$conn->close();
+ 
+    ?>
+	
+	</div>
 
     <script src="JavaScript/three.min.js"></script>
     <script src="JavaScript/OrbitControls.js"></script>

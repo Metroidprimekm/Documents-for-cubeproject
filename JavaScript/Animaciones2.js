@@ -276,7 +276,9 @@
 							Partcode = 6048909;
 							break;	
 					}
+					alert(getStock(Partcode));
                     document.getElementById("sch").value = getStock(Partcode);  //show it in display
+					alert(getStock(Partcode));
                 }
 
                   if (ulSize==2240){
@@ -351,6 +353,7 @@
 						case 8:
 							Partcode = 4183780;
 							break;
+					}
                     document.getElementById("stc").value = getStock(Partcode);;
                 }
             }
