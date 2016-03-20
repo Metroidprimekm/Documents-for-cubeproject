@@ -188,7 +188,8 @@ if ($result->num_rows > 0) {
 }
 $conn->close();
 
-	
+	if($row["identifier"]== $stock)
+		{echo $row["stock"]."<br>";}
 
 if ($_SERVER["REQUEST_METHOD"] == "POST") {
    $name = test_input($_POST["name"]);

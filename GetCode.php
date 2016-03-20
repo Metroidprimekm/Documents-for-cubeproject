@@ -1,10 +1,13 @@
  <?php 
+ 
+ if ($_POST['GetCode']){
+	echo $_POST['GetCode'];
+	$DATA = $_POST['GetCode'];
+	
 	$servername = "localhost";
 	$username = "root";
 	$password = "projectcube";
 	$dbname = "project2";
-	alert($GetCode);
-    $stock = $GetCode;
 	
 // Create connection
 $conn = new mysqli($servername, $username, $password, $dbname);
@@ -21,7 +24,7 @@ if ($ceros->num_rows > 0) {
     while($row = $ceros->fetch_assoc()) {
 		
 		if($row["identifier"]== $stock)
-		{echo $row["stock"]."<br>";
+		{echo htmlspecialchars ($row["stock"]);
 	    break;
 
 	    }
@@ -32,4 +35,7 @@ if ($ceros->num_rows > 0) {
     echo "0 results";
 }
 $conn->close();
+
+ }
     ?>
+	
