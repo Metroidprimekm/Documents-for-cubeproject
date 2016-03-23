@@ -276,9 +276,12 @@
 							Partcode = 6048909;
 							break;	
 					}
-					alert(getStock(Partcode));
-                    document.getElementById("sch").value = getStock(Partcode);  //show it in display
-					alert(getStock(Partcode));
+					
+					
+					  //show it in display		
+					getStock(Partcode);
+					alert("avanza");
+                    
                 }
 
                   if (ulSize==2240){
@@ -354,8 +357,10 @@
 							Partcode = 4183780;
 							break;
 					}
-                    document.getElementById("stc").value = getStock(Partcode);;
+                    document.getElementById("stc").value = getStock(Partcode);
                 }
+				document.getElementById("stc").value = Partcode;
+				getStock2(Partcode);
             }
         });
     };
@@ -385,6 +390,9 @@
 
 function getStock(PartCodeToGet){
 		
+		
+		
+		
 		var hr = new XMLHttpRequest();
 		// Create some variables we need to send to our PHP file
 		var url = "GetCode.php";
@@ -402,4 +410,6 @@ function getStock(PartCodeToGet){
 		// Send the data to PHP now... and wait for response to update the status div
 		hr.send(vars); // Actually execute the request
 	   // document.getElementById("status").innerHTML = "processing...";
+	   	alert("getstock"); 
+	
   }
