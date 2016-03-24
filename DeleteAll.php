@@ -13,7 +13,29 @@ if ($_POST['Reload']){
 		exit;
 		//die("Connection failed: " . $conn->connect_error);
 	} 
+	
 		
+	$sql = "SELECT PartCode FROM order_parts WHERE OrderID = $Order2";
+	$result = $conn->query($sql);
+	
+	if($result === false) {
+	header('Location: ErrorPage.html');
+  
+	} else {
+	$result->data_seek(0);
+	while($row = $result->fetch_assoc()){
+		
+		$Part = $row['PartCode'];
+		$sql2 = "UPDATE Brick SET Stock = Stock +1  WHERE identifier = $Part";
+		if ($conn->query($sql2) === TRUE) {
+			echo "Stock updated successfully";
+		} else {
+			header('Location: ErrorPage.html');
+	   }
+	    //echo $row['PartCode'] . '<br>';
+	}  
+	}
+	
 	$sql = "DELETE FROM order_parts WHERE OrderID = $Order2";
 	if ($conn->query($sql) === TRUE) {
 		//echo "Record deleted successfully";
@@ -21,7 +43,8 @@ if ($_POST['Reload']){
 		header('Location: ErrorPage.html');
 		//echo "Error deleting record: " . $conn->error;
 	}
-	///popopopopopopopopopopo
+		
+	$result->free();
 	$conn->close();		
 }
 

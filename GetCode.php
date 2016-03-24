@@ -1,8 +1,12 @@
+ 
+ 
  <?php 
  
- if ($_POST['GetCode']){
+ function showstock(){
+	 
+	 if ($_POST['GetCode']){
 	echo $_POST['GetCode'];
-	$DATA = $_POST['GetCode'];
+	$stock = $_POST['GetCode'];
 	
 	$servername = "localhost";
 	$username = "root";
@@ -33,9 +37,22 @@ if ($ceros->num_rows > 0) {
 	
 } else {
     echo "0 results";
-}
-$conn->close();
-
- }
-    ?>
+	}
+	$conn->close();
 	
+	
+		$lacala = 12;
+
+	return $row["stock"];
+	}
+
+	 
+	 
+ }
+ 	?>
+	
+	
+
+	
+	
+

@@ -12,6 +12,13 @@
 |*|
 \*/
 
+
+	var div = document.getElementById("dom-target3");
+    var myData = div.textContent;
+	document.getElementById("%s").value = myData;
+	alert(myData);
+	
+	
 const JXON = new (function () {
 
   const
@@ -170,6 +177,8 @@ const JXON = new (function () {
 
 })();
 
+
+
 function ajax_post(array){
     // Create our XMLHttpRequest object
     var hr = new XMLHttpRequest();
@@ -228,7 +237,7 @@ function ajax(){
 
 
 	function codetoget2(){
-	var GetCode = 6050965;
+	var GetCode = 6078317;
 	alert(GetCode);
 	// Create our XMLHttpRequest object
     var hr = new XMLHttpRequest();
