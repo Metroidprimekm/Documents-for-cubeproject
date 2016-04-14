@@ -220,7 +220,7 @@ var didi=1;
             </div>
         </div>
     
-     
+    
         <div id="jcl-demo" class="entry-content">
             <div class="custom-container maintec">
                 <a href="#" class="prev">&lsaquo;</a>
@@ -240,7 +240,7 @@ var didi=1;
                 <div class="clear"></div>
             </div>
         </div>
-      
+       <!--
 
         <div id="jcl-demo" class="entry-content">
             <div class="custom-container mainspe">
@@ -260,7 +260,7 @@ var didi=1;
                 <a href="#" class="next">&rsaquo;</a>
                 <div class="clear"></div>
             </div>
-        </div>
+        </div>-->
 
     <!-- Set of the stock boxes under de carrousel -->
     </br></br></br></br></br></br></br></br></br>
@@ -316,10 +316,11 @@ $conn->close();
 	
 	</div>
 	   
-    Stock:<input type="text" name="stock chasis" value= pruebashow(); id="sch">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+   <!-- Stock:<input type="text" name="stock chasis" value= pruebashow(); id="sch">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
     Stock:<input type="text" name="stock body" value=getStock2(6048908); id="sby">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
     Stock:<input type="text" name="stock techo" value=getStock2(4541728); id="stc">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
     Stock:<input type="text" name="stock special" value="1" id="ssp">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+	-->
 	<script>
 		function getStock2(PartCodeToGet){
 	
@@ -340,7 +341,7 @@ $conn->close();
 		// Send the data to PHP now... and wait for response to update the status div
 		hr.send(vars); // Actually execute the request
 	   // document.getElementById("status").innerHTML = "processing...";
-	   	alert("hola funcion final");
+	   //	alert("hola funcion final");
 		
 		
 
@@ -382,8 +383,6 @@ $conn->close();
     ?>
 </div>
 
- 
-
     <script src="JavaScript/three.min.js"></script>
     <script src="JavaScript/OrbitControls.js"></script>
     <script src="JavaScript/Jsonconverter.js"></script>	
@@ -398,8 +397,6 @@ $conn->close();
     <!-- <p id="demo"></p> -->
     <center><a id="next" href="#" onclick="ajaxWriteXML();"><span class="box1">Next</span></a></center>
 	
-
-
     
 </body>
      <!-- El Drag n' Drop -->
@@ -421,6 +418,12 @@ $conn->close();
             $( "#show_body_2x4x2_R" ).draggable({ revert: true});
             $( "#show_tanque" ).draggable({ revert: true});
             $("#show_techo_2x3x2_A").draggable({revert:true});
+			
+			$("#show_techo_2x3x3_R").draggable({revert:true});
+			$("#show_techo_2x3x2_B").draggable({revert:true});
+			$("#show_techo_2x4x2_V").draggable({revert:true});
+			$("#show_techo_2x1x3_A").draggable({revert:true});
+			
        $(function() {
           $('*[draggable!=true]','.slick-track').unbind('dragstart');
           $( ".draggable-element" ).draggable();
@@ -436,7 +439,7 @@ $conn->close();
   <script >
   verify.addEventListener("click", function(){
     if (confirm('Are you sure that this is the car of your dreams?')) {
-      window.location = "ending.html"; 
+      window.location = "ending.php"; 
   }
   });
   </script>

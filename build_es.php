@@ -102,7 +102,7 @@
      
       
         <div id="TOPNAV"><span id="hilfsnavi_topnavi" class="invisible"><a href="#hilfsnavi_sprachwahl">Top-Navigation &uuml;berspringen</a></span>
-            <a href="index_es.html" title="Home">Home</a><a href="kontakt/" title="Contact">Contacto</a><a href="#" title="about us">Acerca de nosotros</a>
+            <a href="index_es.php" title="Home">Home</a><a href="kontakt/" title="Contact">Contacto</a><a href="#" title="about us">Acerca de nosotros</a>
         </div>
         <div id="LOGIN">    
             <a style="cursor:pointer" title="Öffnet die Login-Box" onclick="document.loginbutton.submit()">Login</a><form style="visibility:hidden" action="/" name="loginbutton" method="post"><input type="hidden" name="995F472B" value="2060A5A289FD684BAD2756C18F7E4393"><input type="hidden" name="login" value="1"></form>
@@ -144,7 +144,7 @@
         <div id="HEADNAV">
             <span id="hilfsnavi_headnavi" class="invisible"><a href="#hilfsnavi_navigation">Haupt-Navigation &uuml;berspringen</a></span>
             <!-- <div id="START" class="passiv"><a href="https://www1.fh-aachen.de" title="Startseite">Startseite</a></div> -->
-            <div class="passiv"><a href="index_es.html" title="Home" id="page_3" onmouseover="dropdown(3)" onmouseout="window.clearTimeout(drop)">Home icon</a></div><div class="passiv"><a href="fachbereiche/" title="Die Fachbereiche der FH Aachen" id="page_4" onmouseover="dropdown(4)" onmouseout="window.clearTimeout(drop)">Acerca de nosotros</a></div><div class="passiv"><a href="hochschule/" title="Informationen zur FH Aachen" id="page_5" onmouseover="dropdown(5)" onmouseout="window.clearTimeout(drop)">Contacto</a></div><div class="passiv"><a href="hochschule/zentralverwaltung/dezernat-v-innovationstransfer/" title="Informationen zu Forschungsprojekten der FH Aachen" id="page_6" onmouseover="dropdown(6)" onmouseout="window.clearTimeout(drop)">Mas</a></div>
+            <div class="passiv"><a href="index_es.php" title="Home" id="page_3" onmouseover="dropdown(3)" onmouseout="window.clearTimeout(drop)">Home icon</a></div><div class="passiv"><a href="fachbereiche/" title="Die Fachbereiche der FH Aachen" id="page_4" onmouseover="dropdown(4)" onmouseout="window.clearTimeout(drop)">Acerca de nosotros</a></div><div class="passiv"><a href="hochschule/" title="Informationen zur FH Aachen" id="page_5" onmouseover="dropdown(5)" onmouseout="window.clearTimeout(drop)">Contacto</a></div><div class="passiv"><a href="hochschule/zentralverwaltung/dezernat-v-innovationstransfer/" title="Informationen zu Forschungsprojekten der FH Aachen" id="page_6" onmouseover="dropdown(6)" onmouseout="window.clearTimeout(drop)">Mas</a></div>
         </div>
        
     </div>
@@ -232,7 +232,7 @@
             </div>
         </div>
       
-
+<!--
         <div id="jcl-demo" class="entry-content">
             <div class="custom-container mainspe">
                 <a href="#" class="prev">&lsaquo;</a>
@@ -257,7 +257,7 @@
 
   </div>
   
-  
+  -->
     <div id="dom-target" style="display: none;">
     <?php 
 	
@@ -345,7 +345,7 @@ $conn->close();
   <script >
   verify.addEventListener("click", function(){
     if (confirm('¿Está seguro que este es el auto de sus sueños?')) {
-      window.location = "ending_es.html"; 
+      window.location = "ending_es.php"; 
   }
   });
   </script>

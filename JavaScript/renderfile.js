@@ -1540,7 +1540,7 @@
 
 var kaka=1;
 	
-	$( "#render" ).droppable({
+	$( "#render" ).droppable({ 
             tolerance: 'touch',
             
             drop: function( event, ui ) {
@@ -1596,7 +1596,7 @@ var kaka=1;
 				if (ui.draggable.is('#show_techo_2x4x2_V')){
 					modelo_242_techo(0X24c51b, 4652863);
 				}
-				if (ui.draggable.is('#show_techo_2x4x2_V')){
+				if (ui.draggable.is('#show_techo_2x3x3_R')){
 					modelo_233(0XFF0000, 6020150);
 				}
 				if (ui.draggable.is('#show_techo_2x1x3_A')){

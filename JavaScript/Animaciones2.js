@@ -280,7 +280,7 @@
 					
 					  //show it in display		
 					getStock(Partcode);
-					alert("avanza");
+					//alert("avanza");
                     
                 }
 
@@ -410,6 +410,6 @@ function getStock(PartCodeToGet){
 		// Send the data to PHP now... and wait for response to update the status div
 		hr.send(vars); // Actually execute the request
 	   // document.getElementById("status").innerHTML = "processing...";
-	   	alert("getstock"); 
+	   //	alert("getstock"); 
 	
   }
