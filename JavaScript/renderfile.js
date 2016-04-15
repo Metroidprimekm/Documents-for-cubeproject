@@ -8,8 +8,11 @@
 		Render.sortObjects = false;
 		Render.shadowMapEnabled = true;
 		Render.shadowMapType = THREE.PCFSoftShadowMap;
+;
 	//El escenario
 	var Escenario=new THREE.Scene();
+	var light = new THREE.AmbientLight( 0x292929 ); // soft white light
+	Escenario.add( light )
 	var container;
 	var stats;
 	var projector, mouse = { x: 0, y: 0 };
@@ -172,11 +175,13 @@
 				   (!ok1 && object.position.x > -17 && BlockType == 241)||
 				   (!ok1 && object.position.x > -63 && BlockType == 222)||
 				   (!ok1 && object.position.x > -63 && BlockType == 221)||
-				   (!ok1 && object.position.x > -47 && BlockType == 213)){
+				   (!ok1 && object.position.x > -47 && BlockType == 213)||
+				   (!ok1 && object.position.x > -63 && BlockType == 232)||
+				   (!ok1 && object.position.x > -63 && BlockType == 233)){
 		
 					object.position.x-=16;
 					
-				} else if((!ok1 && BlockType == 232)||(!ok1 && BlockType == 233) ){
+				} /* else if((!ok1 && BlockType == 232)||(!ok1 && BlockType == 233) ){
 					
 					switch(object.position.x){
 						
@@ -203,7 +208,7 @@
 						
 					}
 					
-				}
+				} */
 							
 				izq = false;
 			}
@@ -215,11 +220,13 @@
 				   (!ok1 && object.position.x < -33 && BlockType == 221)||
 				   (!ok1 && object.position.x < 45  && BlockType == 241)||
 				   (!ok1 && object.position.x < -1  && BlockType == 242)||
-				   (!ok1 && object.position.x < 31  && BlockType == 213)){
+				   (!ok1 && object.position.x < 31  && BlockType == 213)||
+				   (!ok1 && object.position.x < 15  && BlockType == 232)||
+				   (!ok1 && object.position.x < 15  && BlockType == 233)){
 					
 					object.position.x+=16;
 					
-				} else if((!ok1 && BlockType == 232)||(!ok1 && BlockType == 233)){
+				} /* else if((!ok1 && BlockType == 232)||(!ok1 && BlockType == 233)){
 					
 					switch(object.position.x){
 						
@@ -246,7 +253,7 @@
 						
 					}
 					
-				}
+				} */
 				der = false;
 			}
 						
@@ -254,7 +261,8 @@
 				if ( !ok1 ){
 					if(BlockType == 222 || BlockType == 242 || 
 					   BlockType == 261 || BlockType == 281 ||
-					   BlockType == 213){
+					   BlockType == 213 || BlockType == 232 ||
+					   BlockType == 233){
 					switch(object.position.x){
 						case 0:
 						case -0.5:
@@ -416,7 +424,7 @@
 					bajar-=9; */
 					ok1 = true;
 					
-				}else if(BlockType == 232 || BlockType == 233){
+				}/* else if(BlockType == 232 || BlockType == 233){
 					
 					switch(object.position.x){
 						
@@ -447,7 +455,7 @@
 						
 					}
 					ok1 = true;
-				}
+				} */
 				
 				}
 			ok = false;
@@ -519,7 +527,7 @@
 			arrayBlock[arrayBlockCounter].PosZ = 0;
 			arrayBlock[arrayBlockCounter].length = 6;
 			arrayBlock[arrayBlockCounter].height = 1;
-			ajaxReserveBlock();
+			////ajaxReserveBlock();
 			//Aumenta el counter para la posicion dentro del arreglo de bloques
 			arrayBlockCounter++;
 		
@@ -798,7 +806,7 @@
 		//Crea el objeto de Chasis en el arreglo de bloques
 		arrayBlock[arrayBlockCounter] = new Block(PartCode, BlockType, modelo_color);
 		
-		ajaxReserveBlock();
+		////ajaxReserveBlock();
 	}
 	
 	function modelo_222(modelo_color, partcode){
@@ -839,7 +847,7 @@
 		arrayBlock[arrayBlockCounter] = new Block(PartCode, "LegoBlock", modelo_color,"Normal");
 		//alert(arrayBlock[arrayBlockCounter].PartCode)
 		
-		ajaxReserveBlock();
+		////ajaxReserveBlock();
 	}	
 
 	function modelo_241(modelo_color, partcode){
@@ -878,7 +886,7 @@
 		//Crea el objeto de Chasis en el arreglo de bloques
 		arrayBlock[arrayBlockCounter] = new Block(PartCode, "LegoBlock", modelo_color, "Normal");
 		
-		ajaxReserveBlock();
+		////ajaxReserveBlock();
 	}
 	
 	function modelo_242(modelo_color, partcode){
@@ -917,7 +925,7 @@
 		//Crea el objeto de Chasis en el arreglo de bloques
 		arrayBlock[arrayBlockCounter] = new Block(PartCode, "LegoBlock", modelo_color, "Normal");
 		
-		ajaxReserveBlock();
+		////ajaxReserveBlock();
 	}	
 	
 	function modelo_261(modelo_color, partcode){
@@ -957,7 +965,7 @@
 		//Crea el objeto de Chasis en el arreglo de bloques
 		arrayBlock[arrayBlockCounter] = new Block(PartCode, "LegoBlock", modelo_color, "Normal");
 		
-		ajaxReserveBlock();
+		////ajaxReserveBlock();
 	}
 
 	function modelo_281(modelo_color, partcode){
@@ -997,7 +1005,7 @@
 		//Crea el objeto de Chasis en el arreglo de bloques
 		arrayBlock[arrayBlockCounter] = new Block(PartCode, "LegoBlock", modelo_color, "Normal");
 		
-		ajaxReserveBlock();
+		////ajaxReserveBlock();
 	}
 	
 	function modelo_232(modelo_color, partcode){
@@ -1041,7 +1049,7 @@
 		//Crea el objeto de Chasis en el arreglo de bloques
 		arrayBlock[arrayBlockCounter] = new Block(PartCode, "LegoBlock", modelo_color, "Normal");
 		
-		ajaxReserveBlock();
+		////ajaxReserveBlock();
 	}
 	
 	function modelo_242_techo(modelo_color, partcode){
@@ -1082,7 +1090,7 @@
 		//Crea el objeto de Chasis en el arreglo de bloques
 		arrayBlock[arrayBlockCounter] = new Block(PartCode, "LegoBlock", modelo_color, "Normal");
 		
-		ajaxReserveBlock();
+		////ajaxReserveBlock();
 	}
 	
 	function modelo_233(modelo_color, partcode){
@@ -1123,7 +1131,7 @@
 		//Crea el objeto de Chasis en el arreglo de bloques
 		arrayBlock[arrayBlockCounter] = new Block(PartCode, "LegoBlock", modelo_color, "Normal");
 		
-		ajaxReserveBlock();
+		////ajaxReserveBlock();
 	}
   
 	function modelo_213(modelo_color, partcode){
@@ -1164,7 +1172,7 @@
 		//Crea el objeto de Chasis en el arreglo de bloques
 		arrayBlock[arrayBlockCounter] = new Block(PartCode, "LegoBlock", modelo_color, "Normal");
 		
-		ajaxReserveBlock();
+		////ajaxReserveBlock();
 	}	
 	
 	function rem_3(){
@@ -1362,6 +1370,7 @@
 				actual = 0;
 				actual2 = 0;
 				
+				ajaxReserveBlock();
 				ajaxSendBlock();
 				
 				//Aumenta el counter para la posicion dentro del arreglo de bloques
@@ -1545,62 +1554,62 @@ var kaka=1;
             
             drop: function( event, ui ) {
             	if (ui.draggable.is('#show_chasisR')){
-            		modelo_chasis(0Xff0000,6048907);	
-            		document.getElementById("sch").value = getStock(6048907);
+            		modelo_chasis(0XBE0606,6048907);	
+            		//document.getElementById("sch").value = getStock(6048907);
             	}
             	if (ui.draggable.is('#show_chasisA')){
-            		modelo_chasis(0X0000ff,6048908);
+            		modelo_chasis(0X2562B3,6048908);
 				}
             	if (ui.draggable.is('#show_chasisV')){
-            		modelo_chasis(0X24c51b,6048909);
+            		modelo_chasis(0X59B042,6048909);
 				}
 				if (ui.draggable.is('#show_body_2x2x2_R')){
-					modelo_222(0Xff0000, 343721);
+					modelo_222(0XBE0606, 343721);
 				}
 				if (ui.draggable.is('#show_body_2x2x2_A')){
-					modelo_222(0Xffff00, 343724);
+					modelo_222(0XF6C503, 343724);
 				}
 				if (ui.draggable.is('#show_body_2x4x1_A')){
-					modelo_241(0Xffff00, 4160152);
+					modelo_241(0XF6C503, 4160152);
 				}
 				if (ui.draggable.is('#show_body_2x4x2_V')){
-					modelo_242(0X24c51b, 4166923);
+					modelo_242(0X97BE3F, 4166923);
 				}
 				if (ui.draggable.is('#show_body_2x4x2_A')){
-					modelo_242(0X0000ff, 4167177);
+					modelo_242(0X7599CE, 4167177);
 				}
 				if (ui.draggable.is('#show_body_2x2x2_V')){
-					modelo_222(0Xffff00, 4168579);
+					modelo_222(0X59B042, 4168579);
 				}
 				if (ui.draggable.is('#show_body_2x4x1_V')){
-					modelo_241(0X24c51b, 4170795);
+					modelo_241(0X59B042, 4170795);
 				}
 				if (ui.draggable.is('#show_body_2x2x2_L')){
-					modelo_222(0X66ff66, 4183780);
+					modelo_222(0X97BE3F, 4183780);
 				}
 				if (ui.draggable.is('#show_body_2x8x1_V')){
-					modelo_281(0X24c51b, 4247780);
+					modelo_281(0X59B042, 4247780);
 				}
 				if (ui.draggable.is('#show_body_2x6_1_A')){
-					modelo_261(0X0000ff, 6023087);
+					modelo_261(0X7599CE, 6023087);
 				}
 				if (ui.draggable.is('#show_body_2x4x2_R')){
-					modelo_242(0Xff0000, 301121);
+					modelo_242(0XBE0606, 301121);
 				}
 				if (ui.draggable.is('#show_techo_2x3x2_A')){
-					modelo_232(0X0000ff, 4541728);
+					modelo_232(0X7599CE, 4541728);
 				}
 				if (ui.draggable.is('#show_techo_2x3x2_B')){
 					modelo_232(0XFFFFFF, 6004947);
 				}
 				if (ui.draggable.is('#show_techo_2x4x2_V')){
-					modelo_242_techo(0X24c51b, 4652863);
+					modelo_242_techo(0XA3D651, 4652863);
 				}
 				if (ui.draggable.is('#show_techo_2x3x3_R')){
-					modelo_233(0XFF0000, 6020150);
+					modelo_233(0XBE0606, 6020150);
 				}
 				if (ui.draggable.is('#show_techo_2x1x3_A')){
-					modelo_213(0Xffff00, 6030817);
+					modelo_213(0XF6C503, 6030817);
 				}
 			}
   	});

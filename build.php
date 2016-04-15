@@ -438,6 +438,7 @@ $conn->close();
   <script src="JavaScript/build.js"></script>
   <script >
   verify.addEventListener("click", function(){
+	  if (objects[0] != null && objects[1] != null && arrayBlockCounter >= 2)
     if (confirm('Are you sure that this is the car of your dreams?')) {
       window.location = "ending.php"; 
   }
