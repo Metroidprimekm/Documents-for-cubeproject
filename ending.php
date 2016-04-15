@@ -60,13 +60,13 @@
     <BUTTONBAR id="BUTTONBAR">
         <div id="language" title="Language">
         
-       <a href="ending.html" class="lang">
+       <a href="ending.php" class="lang">
             <img src="Figures/english.png" width="30" height="20" >
             </a>
-            <a href="ending_es.html" class="lang">
+            <a href="ending_es.php" class="lang">
             <img src="Figures/espanol.png" width="30" height="20" >
             </a>
-            <a href="ending_de.html" class="lang">
+            <a href="ending_de.php" class="lang">
             <img src="Figures/deutsch.png" width="30" height="20" >
             </a>
 
@@ -164,13 +164,13 @@
         
         <div id="SPRACHE">
             <span id="hilfsnavi_sprachwahl" class="invisible"><a href="#hilfsnavi_suche">Sprachumschaltung &uuml;berspringen</a></span>
-            <a href="ending.html" class="lang">
+            <a href="ending.php" class="lang">
             <img src="Figures/english.png" width="30" height="20" >
             </a>
-            <a href="ending_es.html" class="lang">
+            <a href="ending_es.php" class="lang">
             <img src="Figures/espanol.png" width="30" height="20" >
             </a>
-            <a href="ending_de.html" class="lang">
+            <a href="ending_de.php" class="lang">
             <img src="Figures/deutsch.png" width="30" height="20" >
             </a>
         </div>
@@ -191,7 +191,6 @@
   <center><h1 class="tittle">Your dreamed car is being builded</h1></br></center>
   <center><img src="Figures/finalcar.jpg" alt="CUBE"/></center></br>
   
-
 </body>
 
 </html>

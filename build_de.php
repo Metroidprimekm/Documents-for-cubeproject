@@ -102,7 +102,7 @@
      
       
         <div id="TOPNAV"><span id="hilfsnavi_topnavi" class="invisible"><a href="#hilfsnavi_sprachwahl">Top-Navigation &uuml;berspringen</a></span>
-            <a href="index_de.html" title="Home">Home</a><a href="kontakt/" title="Contact">Kontact</a><a href="#" title="about us">&Uuml;ber uns</a>
+            <a href="index_de.php" title="Home">Home</a><a href="kontakt/" title="Contact">Kontact</a><a href="#" title="about us">&Uuml;ber uns</a>
         </div>
         <div id="LOGIN">    
             <a style="cursor:pointer" title="Öffnet die Login-Box" onclick="document.loginbutton.submit()">Login</a><form style="visibility:hidden" action="/" name="loginbutton" method="post"><input type="hidden" name="995F472B" value="2060A5A289FD684BAD2756C18F7E4393"><input type="hidden" name="login" value="1"></form>
@@ -144,7 +144,7 @@
         <div id="HEADNAV">
             <span id="hilfsnavi_headnavi" class="invisible"><a href="#hilfsnavi_navigation">Haupt-Navigation &uuml;berspringen</a></span>
             <!-- <div id="START" class="passiv"><a href="https://www1.fh-aachen.de" title="Startseite">Startseite</a></div> -->
-            <div class="passiv"><a href="index_de.html" title="Home" id="page_3" onmouseover="dropdown(3)" onmouseout="window.clearTimeout(drop)">Home icon</a></div><div class="passiv"><a href="fachbereiche/" title="Die Fachbereiche der FH Aachen" id="page_4" onmouseover="dropdown(4)" onmouseout="window.clearTimeout(drop)">&Uuml;ber uns</a></div><div class="passiv"><a href="hochschule/" title="Informationen zur FH Aachen" id="page_5" onmouseover="dropdown(5)" onmouseout="window.clearTimeout(drop)">Kontact</a></div><div class="passiv"><a href="hochschule/zentralverwaltung/dezernat-v-innovationstransfer/" title="Informationen zu Forschungsprojekten der FH Aachen" id="page_6" onmouseover="dropdown(6)" onmouseout="window.clearTimeout(drop)">More</a></div>
+            <div class="passiv"><a href="index_de.php" title="Home" id="page_3" onmouseover="dropdown(3)" onmouseout="window.clearTimeout(drop)">Home icon</a></div><div class="passiv"><a href="fachbereiche/" title="Die Fachbereiche der FH Aachen" id="page_4" onmouseover="dropdown(4)" onmouseout="window.clearTimeout(drop)">&Uuml;ber uns</a></div><div class="passiv"><a href="hochschule/" title="Informationen zur FH Aachen" id="page_5" onmouseover="dropdown(5)" onmouseout="window.clearTimeout(drop)">Kontact</a></div><div class="passiv"><a href="hochschule/zentralverwaltung/dezernat-v-innovationstransfer/" title="Informationen zu Forschungsprojekten der FH Aachen" id="page_6" onmouseover="dropdown(6)" onmouseout="window.clearTimeout(drop)">Mehr</a></div>
         </div>
        
     </div>
@@ -232,7 +232,7 @@
             </div>
         </div>
       
-
+<!--
         <div id="jcl-demo" class="entry-content">
             <div class="custom-container mainspe">
                 <a href="#" class="prev">&lsaquo;</a>
@@ -256,7 +256,7 @@
     </center>
 
   </div>
-  
+  -->
   
     <div id="dom-target" style="display: none;">
     <?php 
@@ -300,7 +300,7 @@ $conn->close();
     <a onclick="izq = !izq;" href="#" ><span class="box1">Links</span></a>
     <a onclick="der = !der;" href="#"><span class="box1">Rechst</span></a>
     <a onclick="ok = !ok;" href="#"><span class="box1">Ok</span></a>
-	<a onclick="rem = !rem;" href="#"><span class="box1">Remove</span></a>
+	<a onclick="rem = !rem;" href="#"><span class="box1">Entfernen</span></a>
     <!-- <p id="demo"></p> -->
     <center><a id="next" href="#"><span class="box1">Weiter</span></a></center>    
   
@@ -343,7 +343,7 @@ $conn->close();
   <script >
   verify.addEventListener("click", function(){
     if (confirm('Sind Sie sicher, ob dieses Ihr Traumauto ist?')) {
-      window.location = "ending_de.html"; 
+      window.location = "ending_de.php"; 
   }
   });
   </script>
