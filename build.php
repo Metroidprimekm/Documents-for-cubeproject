@@ -3,9 +3,10 @@
 <html>
 
 <head>
-  <link rel="stylesheet" type"text/css" href="Styles/styles.css" />
-  <link rel="stylesheet" href="Styles/style-test.css" />
-  <link rel="stylesheet" type="text/css" href="Styles/Carruselstyle.css">
+
+  <!-- <link rel="stylesheet" type"text/css" href="Styles/styles.css" />
+  <link rel="stylesheet" href="Styles/style-test.css" /> -->
+<!-- <link rel="stylesheet" type="text/css" href="Styles/Carruselstyle.css"> -->
 
   <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
 
@@ -164,9 +165,9 @@ var didi=1;
   <link href="http://code.jquery.com/ui/1.10.4/themes/ui-lightness/jquery-ui.css" rel="stylesheet">
   <script src="http://code.jquery.com/ui/1.10.4/jquery-ui.js"></script>
 
-<body>
+<div id="SEITE">
+    <a href="testindex.html" id="logo" title="zur Startseite"></a>
 
-  <center><h1 class="tittle">FH Aachen Manufacturing Cube</h1></br></center>
   
   <style> 
       canvas { width: 30%; height: 100%; padding-left:5%;}
@@ -174,15 +175,20 @@ var didi=1;
       <!-- #droppable { width: 150px; height: 150px; padding: 0.5em; float: left; margin: 10px; } -->
     </style>
 
+
+    <div id="MAIN" class="none">
+
+        <div id="MAINNAV">
+
     <script src="JavaScript/OBJLoader.js"></script>
     <script src="JavaScript/JSONLoader.js"></script>
-    <div id="render">
+    
 
   <center>
 
     <div id="jcl-demo" class="entry-content">
                 <div class="custom-container mainchas">
-                    <a href="#" class="prev">&lsaquo;</a>
+                   
                     <div class="carousel">
                         <ul>
                             <li><a id = "show_chasisR"><img src="Figures/Legos/6048907.png"></a></li>
@@ -190,14 +196,16 @@ var didi=1;
                             <li><a id = "show_chasisV"><img src="Figures/Legos/6048909.png"></a></li>
                         </ul>
                     </div>
+                    <a href="#" class="prev">&lsaquo;</a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
                     <a href="#" class="next">&rsaquo;</a>
                     <div class="clear"></div>
                 </div>
             </div>
+            <br>
         
         <div id="jcl-demo" class="entry-content">
             <div class="custom-container mainbody">
-                <a href="#" class="prev">&lsaquo;</a>
+                               
                 <div class="carousel">
                     <ul>
                         <li><a id="show_body_2x2x2_R"><img src="Figures/Legos/343721.png"></a></li>
@@ -215,15 +223,17 @@ var didi=1;
 
                     </ul>
                 </div>
+                <a href="#" class="prev">&lsaquo;</a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
                 <a href="#" class="next">&rsaquo;</a>
                 <div class="clear"></div>
             </div>
-        </div>
-    
+        </div> 
+        <br>
+   
     
         <div id="jcl-demo" class="entry-content">
             <div class="custom-container maintec">
-                <a href="#" class="prev">&lsaquo;</a>
+                               
                 <div class="carousel">
                     <ul>
                         <li><a id="show_techo_2x3x2_A"><img src="Figures/Legos/4541728.png"></a></li>
@@ -232,10 +242,11 @@ var didi=1;
                         <li><a id="show_ventana_2x3x2_A"><img src="Figures/Legos/6020110.png"></a></li>
                         <li><a id="show_ventana_2x4x2_R"><img src="Figures/Legos/6020134.png"></a></li>
                         <li><a id="show_techo_2x3x3_R"><img src="Figures/Legos/6020150.png"></a></li>
-                        <li><a id="show_ventana_2x2x3_R"><img src="Figures/Legos/6020412.png"></a></li>
+                        <li><a id="show_ventana_2x2x2_R"><img src="Figures/Legos/6020412.png"></a></li>
                         <li><a id="show_ventana_2x2x2_V"><img src="Figures/Legos/6025187.png"></a></li>
                     </ul>
                 </div>
+                <a href="#" class="prev">&lsaquo;</a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
                 <a href="#" class="next">&rsaquo;</a>
                 <div class="clear"></div>
             </div>
@@ -262,13 +273,15 @@ var didi=1;
             </div>
         </div>-->
 
-    <!-- Set of the stock boxes under de carrousel -->
+
+    <!-- Set of the stock boxes under the carrousel -->
     </br></br></br></br></br></br></br></br></br>
     <script type="text/javascript">
 	   getStock2(6048908);
 	   </script>
 	   
-	   <div id="dom-target2" style="display: none;">
+	   <div id="dom-target2" style="display: none;"></div> 
+       
   <?php 
 
   function pruebashow(){
@@ -306,21 +319,16 @@ if ($ceros->num_rows > 0) {
     echo "0 results";
 }
 $conn->close();
-
 	  return $row["stock"]; 
-	  
   }
-
- 
     ?>
-	
-	</div>
 	   
    <!-- Stock:<input type="text" name="stock chasis" value= pruebashow(); id="sch">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
     Stock:<input type="text" name="stock body" value=getStock2(6048908); id="sby">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
     Stock:<input type="text" name="stock techo" value=getStock2(4541728); id="stc">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
     Stock:<input type="text" name="stock special" value="1" id="ssp">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
 	-->
+
 	<script>
 		function getStock2(PartCodeToGet){
 	
@@ -342,14 +350,10 @@ $conn->close();
 		hr.send(vars); // Actually execute the request
 	   // document.getElementById("status").innerHTML = "processing...";
 	   //	alert("hola funcion final");
-		
-		
 
   }</script>
-      </div>
+    
     </center>
-
-  </div>
   
   <div id="dom-target" style="display: none;">
     <?php 
@@ -381,24 +385,73 @@ if ($result->num_rows > 0) {
 $conn->close();
 	
     ?>
+
+</div>
 </div>
 
+<div id="INHALT_MAIN">
+<p><i> Use the arrows to move the Lego block to the right or to the left and then the "ok" button to place it.
+When you are finish of building your car, press the green arrow to go next. If want to remove press the red cross </p>
+</br></i>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+    <a onclick="izq = !izq;" href="#" ><img src="Figures/flechaizq.png"></a>
+    <a onclick="ok = !ok;" href="#"><img src="Figures/interfaz.png"></a>
+    <a onclick="der = !der;" href="#"><img src="Figures/flechader.png"></a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+    <a align="left" onclick="rem = !rem;" href="#"><img src="Figures/cruzar.png"></a>
+    <!-- <p id="demo"></p> --> &nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+    <a  id="next" href="#" onclick="ajaxWriteXML();"><img class="box1" src="Figures/flechago.png"></a>
+
+<div id="render">
     <script src="JavaScript/three.min.js"></script>
     <script src="JavaScript/OrbitControls.js"></script>
     <script src="JavaScript/Jsonconverter.js"></script>	
     <script src="JavaScript/renderfile.js"></script> 
+</div>
 
-    <br><br>
 
-    <a onclick="izq = !izq;" href="#" ><span class="box1">Left</span></a>
-    <a onclick="der = !der;" href="#"><span class="box1">Right</span></a>
-    <a onclick="ok = !ok;" href="#"><span class="box1">Ok</span></a>
-	<a onclick="rem = !rem;" href="#"><span class="box1">Remove</span></a>
-    <!-- <p id="demo"></p> -->
-    <center><a id="next" href="#" onclick="ajaxWriteXML();"><span class="box1">Next</span></a></center>
-	
+<!-- Close of the INHALT_MAIN -->
+</div>
+
+    <div id="FOOTER">
+            <div id="BREADCRUMB_FOOTER">
+                
+            </div>
+            <div class="mobil" id="TOPNAV">
+                <h2>FH Direkt</h2><a href="kontakt/" title="Kontaktinformationen der FH Aachen">Kontakt/Hilfe</a><a href="hochschule/zentralverwaltung/dezernat-i-personal/stellenanzeigen/" title="Stellenanzeigen">Stellenanzeigen</a><a href="presse/" title="Presseinformationen der FH Aachen">Presse</a><a href="topnavi/telefonbuch/" title="Telefonbuch">Telefonbuch</a><a href="downloads/?no_cache=1" title="Formulare, Flyer, Broschüren, Informationen, ...">Downloads</a>
+            </div>
+            <div id="INHALT_FOOTER">
+
+                <div class="STD NO_1">
+    <!--  CONTENT ELEMENT, uid:43/text [begin] -->
+        <div id="c43" class="csc-default">
+        <!--  Header: [begin] -->
+            <div class="csc-header csc-header-n1"><h2 class="csc-firstHeader">Kontakt</h2></div>
+        <!--  Header: [end] -->
+            
+        <!--  Text: [begin] -->
+            <p class="bodytext"><b>FH Aachen<br></b>Postfach 100 560<br>52005 Aachen<br>T +49.241.6009 0<br>F +49.241.6009 51090</p>
+        <!--  Text: [end] -->
+            </div>
+    <!--  CONTENT ELEMENT, uid:43/text [end] -->
+        </div>
+                
+            </div>
+
+
+        <div style="clear: both;"></div>
+        </div>
+
+        <!-- CLose div MAIN -->
+        </div>
+
+    <!-- CLose div SEITE -->
+    </div>
+<!-- CLose div PAGE -->
+</div>
     
 </body>
+
+
      <!-- El Drag n' Drop -->
       <script>
          $(function() {
@@ -423,6 +476,11 @@ $conn->close();
 			$("#show_techo_2x3x2_B").draggable({revert:true});
 			$("#show_techo_2x4x2_V").draggable({revert:true});
 			$("#show_techo_2x1x3_A").draggable({revert:true});
+			$("#show_ventana_2x3x2_A").draggable({revert:true});
+			$("#show_ventana_2x4x2_R").draggable({revert:true});
+			$("#show_ventana_2x2x2_R").draggable({revert:true});
+			$("#show_ventana_2x2x2_V").draggable({revert:true});
+			
 			
        $(function() {
           $('*[draggable!=true]','.slick-track').unbind('dragstart');
@@ -438,7 +496,7 @@ $conn->close();
   <script src="JavaScript/build.js"></script>
   <script >
   verify.addEventListener("click", function(){
-	  if (objects[0] != null && objects[1] != null && arrayBlockCounter >= 2)
+    if (objects[0] != null && objects[1] != null && arrayBlockCounter >= 2)
     if (confirm('Are you sure that this is the car of your dreams?')) {
       window.location = "ending.php"; 
   }

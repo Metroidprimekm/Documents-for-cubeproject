@@ -8,7 +8,17 @@
 		Render.sortObjects = false;
 		Render.shadowMapEnabled = true;
 		Render.shadowMapType = THREE.PCFSoftShadowMap;
+		//Render.addEventListener("dblclick", myfunction);
+		
+		
 ;
+document.getElementById("render").ondblclick = function() {dblClickFunc()};
+
+function dblClickFunc() {
+ok = !ok;
+		//alert("doble");
+		}
+	
 	//El escenario
 	var Escenario=new THREE.Scene();
 	var light = new THREE.AmbientLight( 0x292929 ); // soft white light
@@ -20,8 +30,8 @@
 	// la Figura 
 	var Figura;
 	var controls;
-	var Ancho=window.innerWidth*.65;
-	var Alto=window.innerHeight*.60;
+	var Ancho=window.innerWidth*.45;
+	var Alto=window.innerHeight*.78;
 	var Territorio;
 	var object;
 	var Angulo = 45;	
@@ -170,6 +180,8 @@
 			requestAnimationFrame(animacion);
 			if( izq ){
 				if((!ok1 && object.position.x > -63 && BlockType == 242)||
+				   (!ok1 && object.position.x > -63 && BlockType == 243)||
+				   (!ok1 && object.position.x > -63 && BlockType == 223)||
 				   (!ok1 && object.position.x > -64 && BlockType == 261)||
 				   (!ok1 && object.position.x > -63 && BlockType == 281)||
 				   (!ok1 && object.position.x > -17 && BlockType == 241)||
@@ -215,11 +227,13 @@
 			
 			if( der ){
 				if((!ok1 && object.position.x < 31  && BlockType == 222)||
+				   (!ok1 && object.position.x < 31  && BlockType == 223)||
 				   (!ok1 && object.position.x < -34 && BlockType == 261)||
 				   (!ok1 && object.position.x < -65 && BlockType == 281)||
 				   (!ok1 && object.position.x < -33 && BlockType == 221)||
 				   (!ok1 && object.position.x < 45  && BlockType == 241)||
 				   (!ok1 && object.position.x < -1  && BlockType == 242)||
+				   (!ok1 && object.position.x < -1  && BlockType == 243)||
 				   (!ok1 && object.position.x < 31  && BlockType == 213)||
 				   (!ok1 && object.position.x < 15  && BlockType == 232)||
 				   (!ok1 && object.position.x < 15  && BlockType == 233)){
@@ -262,7 +276,8 @@
 					if(BlockType == 222 || BlockType == 242 || 
 					   BlockType == 261 || BlockType == 281 ||
 					   BlockType == 213 || BlockType == 232 ||
-					   BlockType == 233){
+					   BlockType == 233 || BlockType == 223 ||
+					   BlockType == 243){
 					switch(object.position.x){
 						case 0:
 						case -0.5:
@@ -850,6 +865,88 @@
 		////ajaxReserveBlock();
 	}	
 
+	function modelo_222_w(modelo_color, partcode){
+		if( ok1 && bChasis ){
+		ok1 = false;
+		PartCode = partcode;
+		BlockType = 222;
+		loader.load('JavaScript/modelo_ventana_222.json',
+		function (geometry){
+			
+			Material_modelo=new THREE.MeshLambertMaterial({color:modelo_color});
+			object = new THREE.Mesh(geometry, Material_modelo);
+				
+				object.position.x =-16;
+				object.position.y =94.1;
+				object.position.z =-14.5;
+				object.rotation.x +=90 * Math.PI / 18;
+			
+				object.castShadow = false;
+				object.receiveShadow = false;
+				Escenario.add(object);
+				objects.push(object);
+				count++;
+			
+			object.scale.x=1;
+			object.scale.y=1;
+			object.scale.z=1;
+			object.length = 2;
+			object.height = 2;
+			arrayBlock[arrayBlockCounter].objLength = object.length;
+			arrayBlock[arrayBlockCounter].objHeight = object.height;
+			;
+		});
+		
+	}
+		
+		//Crea el objeto de Chasis en el arreglo de bloques
+		arrayBlock[arrayBlockCounter] = new Block(PartCode, "LegoBlock", modelo_color,"Normal");
+		//alert(arrayBlock[arrayBlockCounter].PartCode)
+		
+		////ajaxReserveBlock();
+	}
+	
+	function modelo_222_w_recto(modelo_color, partcode){
+	if( ok1 && bChasis ){
+	ok1 = false;
+	PartCode = partcode;
+	BlockType = 222;
+	loader.load('JavaScript/modelo_ventana_recto_222.json',
+	function (geometry){
+		
+		Material_modelo=new THREE.MeshLambertMaterial({color:modelo_color});
+		object = new THREE.Mesh(geometry, Material_modelo);
+			
+			object.position.x =-16;
+			object.position.y =94.1;
+			object.position.z =-14.5;
+			object.rotation.x +=90 * Math.PI / 18;
+		
+			object.castShadow = false;
+			object.receiveShadow = false;
+			Escenario.add(object);
+			objects.push(object);
+			count++;
+		
+		object.scale.x=1;
+		object.scale.y=1;
+		object.scale.z=1;
+		object.length = 2;
+		object.height = 2;
+		arrayBlock[arrayBlockCounter].objLength = object.length;
+		arrayBlock[arrayBlockCounter].objHeight = object.height;
+		;
+	});
+	
+}
+	
+	//Crea el objeto de Chasis en el arreglo de bloques
+	arrayBlock[arrayBlockCounter] = new Block(PartCode, "LegoBlock", modelo_color,"Normal");
+	//alert(arrayBlock[arrayBlockCounter].PartCode)
+	
+	////ajaxReserveBlock();
+}
+	
 	function modelo_241(modelo_color, partcode){
 		if( ok1 && bChasis ){
 		ok1 = false;
@@ -1052,6 +1149,50 @@
 		////ajaxReserveBlock();
 	}
 	
+	function modelo_232_w(modelo_color, partcode){
+		//alert("entro a 232");
+		if( ok1 && bChasis ){
+			//alert("entro al if de ok1 y bchassis");
+		ok1 = false;
+		PartCode = partcode;
+		BlockType = 232;
+		loader.load('JavaScript/modelo_232_ww.json',
+		function (geometry){
+			//alert("entro a geometry");
+			
+			Material_modelo=new THREE.MeshLambertMaterial({color:modelo_color});
+			object = new THREE.Mesh(geometry, Material_modelo);
+				
+				object.position.x =0;
+				object.position.y =93.3;	//29
+				object.position.z =-14.5;	//-14.5
+				object.rotation.x +=90 * Math.PI / 18;
+
+			
+				object.castShadow = false;
+				object.receiveShadow = false;
+				Escenario.add(object);
+				objects.push(object);
+				count++;
+			
+			object.scale.x=1.01;
+			object.scale.y=1.01;
+			object.scale.z=1;
+			object.length = 3;
+			object.height = 2;
+			arrayBlock[arrayBlockCounter].objLength = object.length;
+			arrayBlock[arrayBlockCounter].objHeight = object.height;
+			;
+		});
+		
+	}
+		
+		//Crea el objeto de Chasis en el arreglo de bloques
+		arrayBlock[arrayBlockCounter] = new Block(PartCode, "LegoBlock", modelo_color, "Normal");
+		
+		////ajaxReserveBlock();
+	}
+	
 	function modelo_242_techo(modelo_color, partcode){
 		if( ok1 && bChasis ){
 		ok1 = false;
@@ -1080,6 +1221,88 @@
 			object.scale.z=1;
 			object.length = 4;
 			object.height = 2;
+			arrayBlock[arrayBlockCounter].objLength = object.length;
+			arrayBlock[arrayBlockCounter].objHeight = object.height;
+			;
+		});
+		
+	}
+		
+		//Crea el objeto de Chasis en el arreglo de bloques
+		arrayBlock[arrayBlockCounter] = new Block(PartCode, "LegoBlock", modelo_color, "Normal");
+		
+		////ajaxReserveBlock();
+	}
+	
+	function modelo_242_techo_w(modelo_color, partcode){
+		if( ok1 && bChasis ){
+		ok1 = false;
+		PartCode = partcode;
+		BlockType = 242;
+		loader.load('JavaScript/modelo_techo_242_w.json',
+		function (geometry){
+			
+			Material_modelo=new THREE.MeshLambertMaterial({color:modelo_color});
+			object = new THREE.Mesh(geometry, Material_modelo);
+				
+				object.position.x =-32;
+				object.position.y =93.3;	//29
+				object.position.z =-14.5;	//-14.5
+				object.rotation.x +=90 * Math.PI / 18;
+
+			
+				object.castShadow = false;
+				object.receiveShadow = false;
+				Escenario.add(object);
+				objects.push(object);
+				count++;
+			
+			object.scale.x=1.01;
+			object.scale.y=1.01;
+			object.scale.z=1;
+			object.length = 4;
+			object.height = 2;
+			arrayBlock[arrayBlockCounter].objLength = object.length;
+			arrayBlock[arrayBlockCounter].objHeight = object.height;
+			;
+		});
+		
+	}
+		
+		//Crea el objeto de Chasis en el arreglo de bloques
+		arrayBlock[arrayBlockCounter] = new Block(PartCode, "LegoBlock", modelo_color, "Normal");
+		
+		////ajaxReserveBlock();
+	}
+	
+	function modelo_243_tanque(modelo_color, partcode){
+		if( ok1 && bChasis ){
+		ok1 = false;
+		PartCode = partcode;
+		BlockType = 243;
+		loader.load('JavaScript/modelo_tanque.json',
+		function (geometry){
+			
+			Material_modelo=new THREE.MeshLambertMaterial({color:modelo_color});
+			object = new THREE.Mesh(geometry, Material_modelo);
+				
+				object.position.x =-32;
+				object.position.y =93.3;	//29
+				object.position.z =-14.5;	//-14.5
+				object.rotation.x +=90 * Math.PI / 18;
+
+			
+				object.castShadow = false;
+				object.receiveShadow = false;
+				Escenario.add(object);
+				objects.push(object);
+				count++;
+			
+			object.scale.x=1.01;
+			object.scale.y=1.01;
+			object.scale.z=1;
+			object.length = 4;
+			object.height = 3;
 			arrayBlock[arrayBlockCounter].objLength = object.length;
 			arrayBlock[arrayBlockCounter].objHeight = object.height;
 			;
@@ -1611,6 +1834,23 @@ var kaka=1;
 				if (ui.draggable.is('#show_techo_2x1x3_A')){
 					modelo_213(0XF6C503, 6030817);
 				}
+				if (ui.draggable.is('#show_ventana_2x3x2_A')){
+					modelo_232_w(0X2562B3, 6020110);
+				}
+				if (ui.draggable.is('#show_ventana_2x4x2_R')){
+					modelo_242_techo_w(0XBE0606, 6020134);
+				}
+				if (ui.draggable.is('#show_ventana_2x2x2_R')){
+					modelo_222_w(0XBE0606, 6020412);
+				}
+				if (ui.draggable.is('#show_ventana_2x2x2_V')){
+					modelo_222_w_recto(0X59B042, 6025187);
+				}
+				if (ui.draggable.is('#show_tanque')){
+					modelo_243_tanque(0XF6C503, 6001240);
+				}
+				
+				
 			}
   	});
 
@@ -1618,4 +1858,8 @@ var kaka=1;
 	inicio();
 	animacion();	
 	Delall();
+	
+	
+	
+	
 	
