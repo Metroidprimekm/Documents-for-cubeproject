@@ -4,7 +4,7 @@
             height: 30px;
 
             background-color: #333333;
-            color: ghostwhite;
+            /*color: ghostwhite;*/
             text-decoration: none;
             font-family: Arial, sans-serif;
             font-size: 25px;
@@ -30,7 +30,7 @@
         #jcl-demo .carousel {
             border: 1px solid #bababa;
             border-radius: 10px;
-            background-color: ghostwhite;
+            /*background-color: ghostwhite;*/
             float: left;
             padding-left: 10px;
 

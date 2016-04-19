@@ -3,12 +3,11 @@
 <html>
 
 <head>
-  <link rel="stylesheet" type"text/css" href="Styles/styles.css" />
-  <link rel="stylesheet" href="Styles/style-test.css" />
+<!--   <link rel="stylesheet" type"text/css" href="Styles/styles.css" />
+  <link rel="stylesheet" href="Styles/style-test.css" /> -->
 
   <title>Manufacturing Cube</title>
   
-
  <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
 <!-- 
   This website is powered by TYPO3 - inspiring people to share!
@@ -16,7 +15,6 @@
   TYPO3 is copyright 1998-2015 of Kasper Skaarhoj. Extensions are copyright of their respective owners.
   Information and contribution at http://typo3.org/
 -->
-
 
 <title>Eng_FH Aachen Manufacturing Cube</title>
 <meta name="generator" content="TYPO3 CMS" />
@@ -135,31 +133,7 @@
      
       
         <div id="TOPNAV"><span id="hilfsnavi_topnavi" class="invisible"><a href="#hilfsnavi_sprachwahl">Top-Navigation &uuml;berspringen</a></span>
-            <a href="testindex.php" title="Home">Home</a><a href="kontakt/" title="Contact">Contact</a><a href="#" title="about us">About us</a>
-        </div>
-        <div id="LOGIN">    
-            <a style="cursor:pointer" title="Öffnet die Login-Box" onclick="document.loginbutton.submit()">Login</a><form style="visibility:hidden" action="/" name="loginbutton" method="post"><input type="hidden" name="995F472B" value="2060A5A289FD684BAD2756C18F7E4393"><input type="hidden" name="login" value="1"></form>
-            <div class="loginbox" id="LoginBox" onclick="document.getElementById('LoginBox').style.visibility='hidden';document.getElementById('LoginFrame').style.visibility='hidden'"></div><div class="loginframe" id="LoginFrame"><div class="content" >
-
-  <div class="tx-felogin-pi1">
-    
-<script language="javascript">
-  if ("<div></div>">"" && "<div></div>"!="<div></div>") {
-    text="<div></div>";
-    text=text.substr(5);
-    p=text.search(/<\/div>/);
-    text=text.substr(0,p);
-    alert(text);
-  }
-</script>
-
-
-  </div>
-  
-  <!-- END: Content of extension "felogin", plugin "tx_felogin_pi1" -->
-
-  </div></div>
-            
+            <a href="testindex.php" title="Home">Home</a><a href="Contact.html" title="Contact">Contact</a><a href="About_us.html" title="about us">About us</a>
         </div>
         
         <div id="SPRACHE">
@@ -178,17 +152,16 @@
         <div id="HEADNAV">
             <span id="hilfsnavi_headnavi" class="invisible"><a href="#hilfsnavi_navigation">Haupt-Navigation &uuml;berspringen</a></span>
             <div id="START" class="passiv"><a href="https://www1.fh-aachen.de" title="Startseite">Startseite</a></div>
-            <div class="passiv"><a href="testindex.php" title="Home" id="page_3" onmouseover="dropdown(3)" onmouseout="window.clearTimeout(drop)">Home icon</a></div><div class="passiv"><a href="fachbereiche/" title="Die Fachbereiche der FH Aachen" id="page_4" onmouseover="dropdown(4)" onmouseout="window.clearTimeout(drop)">About us</a></div><div class="passiv"><a href="hochschule/" title="Informationen zur FH Aachen" id="page_5" onmouseover="dropdown(5)" onmouseout="window.clearTimeout(drop)">Contact</a></div><div class="passiv"><a href="hochschule/zentralverwaltung/dezernat-v-innovationstransfer/" title="Informationen zu Forschungsprojekten der FH Aachen" id="page_6" onmouseover="dropdown(6)" onmouseout="window.clearTimeout(drop)">More</a></div>
+            <div class="passiv"><a href="testindex.php" title="Home" id="page_3" onmouseover="dropdown(3)" onmouseout="window.clearTimeout(drop)">Home icon</a></div><div class="passiv"><a href="About_us.html" title="Info" id="page_4" onmouseover="dropdown(4)" onmouseout="window.clearTimeout(drop)">About us</a></div><div class="passiv"><a href="Contact.html" title="contact" id="page_5" onmouseover="dropdown(5)" onmouseout="window.clearTimeout(drop)">Contact</a></div><div class="passiv"><a href="https://www.fh-aachen.de/" title="Algotracosa" id="page_6" onmouseover="dropdown(6)" onmouseout="window.clearTimeout(drop)">More</a></div>
         </div>
        
     </div>
-
 
   <!--         Lo de la FH             -->
 
 <body>
 
-  <center><h1 class="tittle">Your dreamed car is being builded</h1></br></center>
+  <center><h1 class="tittle">Your dreamed car will be build soon</h1></br></center>
   <center><img src="Figures/finalcar.jpg" alt="CUBE"/></center></br>
   
 </body>
