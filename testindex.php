@@ -240,9 +240,9 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 
 
 ?>
-    <!--  <script type="text/javascript">
+<script type="text/javascript">
 window.location = "build.php";
-</script>    -->
+</script>
 <?php
 
 	$conn->close();	
