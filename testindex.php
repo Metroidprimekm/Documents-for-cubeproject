@@ -9,7 +9,9 @@
 <link rel="stylesheet" type="text/css" href="https://www.fh-aachen.de/typo3temp/stylesheet_0ade94ab98.css?1448379798" media="all" />
 <link rel="stylesheet" type="text/css" href="https://www.fh-aachen.de/fileadmin/template/css/fh.css?1450189426" media="all" />
 
+</head>
 
+<body>
 
 <div id="PAGE">
     <BUTTONBAR id="BUTTONBAR">
@@ -139,16 +141,29 @@
        
     </div>
 
-</head>
-
-	<!--         Lo de la FH             -->
-
-<body>
 
 
-	<center><h1 class="tittle">FH Aachen Manufacturing Cube</h1></br></center>
+	<!--         SEITE             -->
+
+
+<div id="SEITE">
+
 	
-	
+
+    <a href="testindex.html" id="logo" title="zur Startseite"></a>
+
+            <div id="MAIN" class="none">
+
+                <div id="MAINNAV">
+                    <span id="hilfsnavi_navigation" class="invisible">
+                        <a href="#hilfsnavi_inhalt">Seiten-Navigation überspringen</a>
+                    </span>
+                    <ul id="BREADCRUMB_MAIN"> 
+                        <li style="color:#00b5ad;"> Create a new user </li>
+                    </ul>
+
+           <ul id="SEITENNAV"> 
+
 	<div id="dom-target" style="display: none;">
 <?php
 // define variables and set to empty values
@@ -225,15 +240,13 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 
 
 ?>
-<script type="text/javascript">
+    <!--  <script type="text/javascript">
 window.location = "build.php";
-</script>
+</script>    -->
 <?php
 
-	$conn->close();
-	
+	$conn->close();	
 }
-
 
 
 function test_input($data) {
@@ -246,19 +259,6 @@ function test_input($data) {
 </div>
 
 
-
-<html>
-  <head>
-  </head>
-  <body>
-    <script>
-      //var js_var = "<?php echo $last_id; ?>";
-	  var js_var = <?php echo json_encode("$last_id"); ?>;
-       // alert("js_var="+ js_var);
-    </script>
-  </body>
-</html>
-
 <!-- <script>
     var div = document.getElementById("dom-target");
     var myData = div.textContent;
@@ -268,32 +268,70 @@ function test_input($data) {
  
 
 <!--<h2>PHP Form Validation</h2> -->
-<form method="post" action="<?php echo htmlspecialchars($_SERVER["PHP_SELF"]);?>"> 
-   Name: <input type="text" name="name">
-   <br><br>
-   E-mail: <input type="text" name="email">
-   <br><br>
-   <input type="submit" name="submit" value="submit" >
+
+
+<form method="post" action="<?php echo htmlspecialchars($_SERVER["PHP_SELF"]);?>">
+   <li> Name: <input type="text" name="name"></li>
+   <li> E-mail: <input type="text" name="email"> </li>
+   <a href="build.php" class="lang"><input type="submit" name="submit" value="GO!" ></a>
+   
+   
+            
+            
    
 </form>
 
+  </ul> 
 
-<?php
+</div>
+</div>
 
-/* echo "<h2>Your Input:</h2>";
-echo $name;
-echo "<br>";
-echo $email;
-echo "<br>"; */
+ <div id="INHALT_MAIN">
 
-
-?>
+    <center><h1 class="tittle">FH Aachen Manufacturing Cube</h1></br></center>
 
  	 <center><img src="Figures/cube.png" alt="CUBE"/></center></br>
+
+</div>  
+
+<div id="FOOTER">
+            <div id="BREADCRUMB_FOOTER">
+                
+            </div>
+            <div class="mobil" id="TOPNAV">
+                <h2>FH Direkt</h2><a href="kontakt/" title="Kontaktinformationen der FH Aachen">Kontakt/Hilfe</a><a href="hochschule/zentralverwaltung/dezernat-i-personal/stellenanzeigen/" title="Stellenanzeigen">Stellenanzeigen</a><a href="presse/" title="Presseinformationen der FH Aachen">Presse</a><a href="topnavi/telefonbuch/" title="Telefonbuch">Telefonbuch</a><a href="downloads/?no_cache=1" title="Formulare, Flyer, Broschüren, Informationen, ...">Downloads</a>
+            </div>
+            <div id="INHALT_FOOTER">
+
+                <div class="STD NO_1">
+    <!--  CONTENT ELEMENT, uid:43/text [begin] -->
+        <div id="c43" class="csc-default">
+        <!--  Header: [begin] -->
+            <div class="csc-header csc-header-n1"><h2 class="csc-firstHeader">Kontakt</h2></div>
+        <!--  Header: [end] -->
+            
+        <!--  Text: [begin] -->
+            <p class="bodytext"><b>FH Aachen<br></b>Postfach 100 560<br>52005 Aachen<br>T +49.241.6009 0<br>F +49.241.6009 51090</p>
+        <!--  Text: [end] -->
+            </div>
+    <!--  CONTENT ELEMENT, uid:43/text [end] -->
+        </div>
+               
+            </div>
+
+
+        <div style="clear: both;"></div>
+        </div>
+
+
+<!-- Close <div> of SEITE -->
+</div>
+<!-- Close <div> of PAGE -->
+</div>
+
+
 		
 	</body>
-
-
 
 
 
