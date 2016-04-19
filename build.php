@@ -452,7 +452,7 @@ When you are finish of building your car, press the green arrow to go next. If w
 </body>
 
 
-     <!-- El Drag n' Drop -->
+     <!-- El Drag n' Drop no -->
       <script>
          $(function() {
             $( "#show_chasisR" ).draggable({ revert: true});
