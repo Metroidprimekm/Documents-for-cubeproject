@@ -3,16 +3,22 @@
 <html>
 
 <head>
-  <link rel="stylesheet" type"text/css" href="Styles/styles.css" />
-  <link rel="stylesheet" href="Styles/style-test.css" />
-  <link rel="stylesheet" type="text/css" href="Styles/Carruselstyle.css">
+
+  <!-- <link rel="stylesheet" type"text/css" href="Styles/styles.css" />
+  <link rel="stylesheet" href="Styles/style-test.css" /> -->
+<!-- <link rel="stylesheet" type="text/css" href="Styles/Carruselstyle.css"> -->
 
   <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
 
-<title>Esp_FH Aachen: Manufacturing Cube</title>
+<title>Eng_FH Aachen: Manufacturing Cube</title>
 
 <link rel="stylesheet" type="text/css" href="https://www.fh-aachen.de/typo3temp/stylesheet_0ade94ab98.css?1448379798" media="all" />
 <link rel="stylesheet" type="text/css" href="https://www.fh-aachen.de/fileadmin/template/css/fh.css?1450189426" media="all" />
+
+<!-- Variable of current position of the Carrousel -->
+<script type="text/javascript">
+var didi=1;
+</script>
 
     <!-- Bliss JS Libs -->
     <script src='JavaScript/Aminaciones.js'></script>
@@ -22,6 +28,7 @@
 
 </head>
 <body>
+
 
 <div id="PAGE">
     <BUTTONBAR id="BUTTONBAR">
@@ -99,33 +106,9 @@
             }
         </script>
         
-     
       
         <div id="TOPNAV"><span id="hilfsnavi_topnavi" class="invisible"><a href="#hilfsnavi_sprachwahl">Top-Navigation &uuml;berspringen</a></span>
-            <a href="index_es.php" title="Home">Home</a><a href="kontakt/" title="Contact">Contacto</a><a href="#" title="about us">Acerca de nosotros</a>
-        </div>
-        <div id="LOGIN">    
-            <a style="cursor:pointer" title="Öffnet die Login-Box" onclick="document.loginbutton.submit()">Login</a><form style="visibility:hidden" action="/" name="loginbutton" method="post"><input type="hidden" name="995F472B" value="2060A5A289FD684BAD2756C18F7E4393"><input type="hidden" name="login" value="1"></form>
-            <div class="loginbox" id="LoginBox" onclick="document.getElementById('LoginBox').style.visibility='hidden';document.getElementById('LoginFrame').style.visibility='hidden'"></div><div class="loginframe" id="LoginFrame"><div class="content" >
-
-  <div class="tx-felogin-pi1">
-    
-<script language="javascript">
-  if ("<div></div>">"" && "<div></div>"!="<div></div>") {
-    text="<div></div>";
-    text=text.substr(5);
-    p=text.search(/<\/div>/);
-    text=text.substr(0,p);
-    alert(text);
-  }
-</script>
-
-  </div>
-  
-  <!-- END: Content of extension "felogin", plugin "tx_felogin_pi1" -->
-
-  </div></div>
-            
+            <a href="testindex.php" title="Home">Home</a><a href="Contact.html" title="Contact">Contacto</a><a href="About_us.html" title="about us">Hacerca de nosotros</a>        
         </div>
         
         <div id="SPRACHE">
@@ -144,20 +127,20 @@
         <div id="HEADNAV">
             <span id="hilfsnavi_headnavi" class="invisible"><a href="#hilfsnavi_navigation">Haupt-Navigation &uuml;berspringen</a></span>
             <!-- <div id="START" class="passiv"><a href="https://www1.fh-aachen.de" title="Startseite">Startseite</a></div> -->
-            <div class="passiv"><a href="index_es.php" title="Home" id="page_3" onmouseover="dropdown(3)" onmouseout="window.clearTimeout(drop)">Home icon</a></div><div class="passiv"><a href="fachbereiche/" title="Die Fachbereiche der FH Aachen" id="page_4" onmouseover="dropdown(4)" onmouseout="window.clearTimeout(drop)">Acerca de nosotros</a></div><div class="passiv"><a href="hochschule/" title="Informationen zur FH Aachen" id="page_5" onmouseover="dropdown(5)" onmouseout="window.clearTimeout(drop)">Contacto</a></div><div class="passiv"><a href="hochschule/zentralverwaltung/dezernat-v-innovationstransfer/" title="Informationen zu Forschungsprojekten der FH Aachen" id="page_6" onmouseover="dropdown(6)" onmouseout="window.clearTimeout(drop)">Mas</a></div>
+            <div class="passiv"><a href="testindex.php" title="Home" id="page_3" onmouseover="dropdown(3)" onmouseout="window.clearTimeout(drop)">Home</a></div><div class="passiv"><a href="About_us.html" title="Info" id="page_4" onmouseover="dropdown(4)" onmouseout="window.clearTimeout(drop)">Acerca de nosotros</a></div><div class="passiv"><a href="Contact.html" title="contact" id="page_5" onmouseover="dropdown(5)" onmouseout="window.clearTimeout(drop)">Contacto</a></div><div class="passiv"><a href="https://www.fh-aachen.de/" title="Algotracosa" id="page_6" onmouseover="dropdown(6)" onmouseout="window.clearTimeout(drop)">Mas</a></div>
         </div>
        
     </div>
 
-<!--         Lo de la FH             -->
+  <!--         Lo de la FH             -->
 
   <!-- Drag n Drop -->
   <link href="http://code.jquery.com/ui/1.10.4/themes/ui-lightness/jquery-ui.css" rel="stylesheet">
   <script src="http://code.jquery.com/ui/1.10.4/jquery-ui.js"></script>
 
-<body>
+<div id="SEITE">
+    <a href="testindex.html" id="logo" title="zur Startseite"></a>
 
-  <center><h1 class="tittle">FH Aachen Manufacturing Cube</h1></br></center>
   
   <style> 
       canvas { width: 30%; height: 100%; padding-left:5%;}
@@ -165,30 +148,38 @@
       <!-- #droppable { width: 150px; height: 150px; padding: 0.5em; float: left; margin: 10px; } -->
     </style>
 
+
+    <div id="MAIN" class="none">
+
+        <div id="MAINNAV">
+
     <script src="JavaScript/OBJLoader.js"></script>
     <script src="JavaScript/JSONLoader.js"></script>
-    <div id="render">
+    
 
   <center>
-
+<font size=6>
     <div id="jcl-demo" class="entry-content">
                 <div class="custom-container mainchas">
-                    <a href="#" class="prev">&lsaquo;</a>
+                   
                     <div class="carousel">
                         <ul>
                             <li><a id = "show_chasisR"><img src="Figures/Legos/6048907.png"></a></li>
                             <li><a id = "show_chasisA"><img src="Figures/Legos/6048908.png"></a></li>
                             <li><a id = "show_chasisV"><img src="Figures/Legos/6048909.png"></a></li>
                         </ul>
-                    </div>
+                    <a href="#" class="prev">&lsaquo;</a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
                     <a href="#" class="next">&rsaquo;</a>
+                    </div>
+
                     <div class="clear"></div>
                 </div>
             </div>
+            <br>
         
         <div id="jcl-demo" class="entry-content">
             <div class="custom-container mainbody">
-                <a href="#" class="prev">&lsaquo;</a>
+                               
                 <div class="carousel">
                     <ul>
                         <li><a id="show_body_2x2x2_R"><img src="Figures/Legos/343721.png"></a></li>
@@ -205,16 +196,19 @@
                         <li><a id="show_tanque"><img src="Figures/Legos/6001240.png"></a></li>
 
                     </ul>
+                    <a href="#" class="prev">&lsaquo;</a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                    <a href="#" class="next">&rsaquo;</a>
                 </div>
-                <a href="#" class="next">&rsaquo;</a>
+                
                 <div class="clear"></div>
             </div>
-        </div>
+        </div> 
+        <br>
+   
     
-     
         <div id="jcl-demo" class="entry-content">
             <div class="custom-container maintec">
-                <a href="#" class="prev">&lsaquo;</a>
+                               
                 <div class="carousel">
                     <ul>
                         <li><a id="show_techo_2x3x2_A"><img src="Figures/Legos/4541728.png"></a></li>
@@ -226,13 +220,16 @@
                         <li><a id="show_ventana_2x2x3_R"><img src="Figures/Legos/6020412.png"></a></li>
                         <li><a id="show_ventana_2x2x2_V"><img src="Figures/Legos/6025187.png"></a></li>
                     </ul>
-                </div>
+                <a href="#" class="prev">&lsaquo;</a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
                 <a href="#" class="next">&rsaquo;</a>
+                </div>
+
                 <div class="clear"></div>
             </div>
         </div>
-      
-<!--
+        </font>
+       <!--
+
         <div id="jcl-demo" class="entry-content">
             <div class="custom-container mainspe">
                 <a href="#" class="prev">&lsaquo;</a>
@@ -251,23 +248,100 @@
                 <a href="#" class="next">&rsaquo;</a>
                 <div class="clear"></div>
             </div>
-        </div>
-      </div>
-    </center>
+        </div>-->
 
-  </div>
+
+    <!-- Set of the stock boxes under the carrousel -->
+    </br></br></br></br></br></br></br></br></br>
+    <script type="text/javascript">
+       getStock2(6048908);
+       </script>
+       
+       <div id="dom-target2" style="display: none;"></div> 
+       
+  <?php 
+
+  function pruebashow(){
+    
+    $stock = 6048907;
+    
+    $servername = "localhost";
+    $username = "root";
+    $password = "projectcube";
+    $dbname = "project2";
+
+    
+// Create connection
+$conn = new mysqli($servername, $username, $password, $dbname);
+// Check connection
+if ($conn->connect_error) {
+    die("Connection failed: " . $conn->connect_error);
+} 
+
+$sql = "SELECT stock,identifier FROM Brick";
+$ceros = $conn->query($sql);
+
+if ($ceros->num_rows > 0) {
+    // output data of each row
+    while($row = $ceros->fetch_assoc()) {
+        
+        if($row["identifier"]== $stock)
+        {echo $row["stock"];
+        break;
+        }
+    
+    }
+    
+} else {
+    echo "0 results";
+}
+$conn->close();
+      return $row["stock"]; 
+  }
+    ?>
+       
+   <!-- Stock:<input type="text" name="stock chasis" value= pruebashow(); id="sch">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+    Stock:<input type="text" name="stock body" value=getStock2(6048908); id="sby">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+    Stock:<input type="text" name="stock techo" value=getStock2(4541728); id="stc">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+    Stock:<input type="text" name="stock special" value="1" id="ssp">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+    -->
+
+    <script>
+        function getStock2(PartCodeToGet){
+    
+        var hr = new XMLHttpRequest();
+        // Create some variables we need to send to our PHP file
+        var url = "GetCode.php";
+        var vars = "GetCode="+PartCodeToGet ;
+        hr.open("POST", url, true);
+        // Set content type header information for sending url encoded variables in the request
+        hr.setRequestHeader("Content-type", "application/x-www-form-urlencoded");
+        // Access the onreadystatechange event for the XMLHttpRequest object
+        hr.onreadystatechange = function() {
+            if(hr.readyState == 4 && hr.status == 200) {
+                var return_data = hr.responseText;
+                //document.getElementById("status").innerHTML = return_data;
+            }
+        }
+        // Send the data to PHP now... and wait for response to update the status div
+        hr.send(vars); // Actually execute the request
+       // document.getElementById("status").innerHTML = "processing...";
+       //   alert("hola funcion final");
+
+  }</script>
+    
+    </center>
   
-  -->
-    <div id="dom-target" style="display: none;">
+  <div id="dom-target" style="display: none;">
     <?php 
-	
-	$maximo=0;
-	$servername = "localhost";
-	$username = "root";
-	$password = "projectcube";
-	$dbname = "project2";
-	
-	// Create connection
+
+    $maximo=0;
+    $servername = "localhost";
+    $username = "root";
+    $password = "projectcube";
+    $dbname = "project2";
+    
+    // Create connection
 $conn = new mysqli($servername, $username, $password, $dbname);
 // Check connection
 if ($conn->connect_error) {
@@ -279,41 +353,88 @@ if ($result->num_rows > 0) {
     // output data of each row
     while($row = $result->fetch_assoc()) {
         
-		$maximo=$maximo+1;
+        $maximo=$maximo+1;
     }
-	echo $maximo. "<br>";
+    echo $maximo. "<br>";
 } else {
     echo "0 results";
 }
 $conn->close();
-	
+    
     ?>
+
+</div>
 </div>
 
+<div id="INHALT_MAIN">
+<p><i> 
+Use las flechas para mover la pieza de logo a la derecha o a la izquierda y despu&eacute;s presione le paloma para colocarla.
+Cuando haya terminado de construir el auto presione la flecha verde para que su auto sea mandado a contruir. Para remover alguna pieza presione la cruz roja.
+</br></i>
+<center>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+    <a onclick="izq = !izq;" href="#" ><img src="Figures/flechaizq.png"></a>&nbsp;&nbsp;&nbsp;
+    <a onclick="ok = !ok;" href="#"><img src="Figures/interfaz.png"></a>&nbsp;&nbsp;&nbsp;
+    <a onclick="der = !der;" href="#"><img src="Figures/flechader.png"></a> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+    <a align="left" onclick="rem = !rem;" href="#"><img src="Figures/cruzar.png"></a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+    <!-- <p id="demo"></p> --> 
+    <a  id="next" href="#" onclick="ajaxWriteXML();"><img class="box1" src="Figures/flechago.png"></a>
+</center>
+<div id="render">
     <script src="JavaScript/three.min.js"></script>
     <script src="JavaScript/OrbitControls.js"></script>
-	<script src="JavaScript/Jsonconverter.js"></script>
+    <script src="JavaScript/Jsonconverter.js"></script> 
     <script src="JavaScript/renderfile.js"></script> 
+</div>
+
+<!-- Close of the INHALT_MAIN -->
+</div>
+
+    <div id="FOOTER">
+            <div id="BREADCRUMB_FOOTER">
+                
+            </div>
+            <div class="mobil" id="TOPNAV">
+                <h2>FH Direkt</h2><a href="kontakt/" title="Kontaktinformationen der FH Aachen">Kontakt/Hilfe</a><a href="hochschule/zentralverwaltung/dezernat-i-personal/stellenanzeigen/" title="Stellenanzeigen">Stellenanzeigen</a><a href="presse/" title="Presseinformationen der FH Aachen">Presse</a><a href="topnavi/telefonbuch/" title="Telefonbuch">Telefonbuch</a><a href="downloads/?no_cache=1" title="Formulare, Flyer, Broschüren, Informationen, ...">Downloads</a>
+            </div>
+            <div id="INHALT_FOOTER">
+
+                <div class="STD NO_1">
+    <!--  CONTENT ELEMENT, uid:43/text [begin] -->
+        <div id="c43" class="csc-default">
+        <!--  Header: [begin] -->
+            <div class="csc-header csc-header-n1"><h2 class="csc-firstHeader">Kontakt</h2></div>
+        <!--  Header: [end] -->
+            
+        <!--  Text: [begin] -->
+            <p class="bodytext"><b>FH Aachen<br></b>Postfach 100 560<br>52005 Aachen<br>T +49.241.6009 0<br>F +49.241.6009 51090</p>
+        <!--  Text: [end] -->
+            </div>
+    <!--  CONTENT ELEMENT, uid:43/text [end] -->
+        </div>
+                
+            </div>
 
 
-    <br><br>
-    <a onclick="izq = !izq;" href="#" ><span class="box1">Izq</span></a>
-    <a onclick="der = !der;" href="#"><span class="box1">Der</span></a>
-    <a onclick="ok = !ok;" href="#"><span class="box1">Ok</span></a>
-	<a onclick="rem = !rem;" href="#"><span class="box1">Remover</span></a>
-    <!-- <p id="demo"></p> -->
-    <center><a id="next" href="#"><span class="box1">Siguiente</span></a></center>
-    <a id="printimg" href=""><span class="box1">Imprimir</span></a>
+        <div style="clear: both;"></div>
+        </div>
+
+        <!-- CLose div MAIN -->
+        </div>
+
+    <!-- CLose div SEITE -->
+    </div>
+<!-- CLose div PAGE -->
+</div>
     
-  
 </body>
+
+
      <!-- El Drag n' Drop -->
       <script>
          $(function() {
             $( "#show_chasisR" ).draggable({ revert: true});
             $( "#show_chasisA" ).draggable({ revert: true});
             $( "#show_chasisV" ).draggable({ revert: true});
-
             $( "#show_body_2x2x2_R" ).draggable({ revert: true});
             $( "#show_body_2x2x2_A" ).draggable({ revert: true});
             $( "#show_body_2x4x1_A" ).draggable({ revert: true});
@@ -326,10 +447,13 @@ $conn->close();
             $( "#show_body_2x6_1_A" ).draggable({ revert: true});
             $( "#show_body_2x4x2_R" ).draggable({ revert: true});
             $( "#show_tanque" ).draggable({ revert: true});
-
             $("#show_techo_2x3x2_A").draggable({revert:true});
-
-
+            
+            $("#show_techo_2x3x3_R").draggable({revert:true});
+            $("#show_techo_2x3x2_B").draggable({revert:true});
+            $("#show_techo_2x4x2_V").draggable({revert:true});
+            $("#show_techo_2x1x3_A").draggable({revert:true});
+            
        $(function() {
           $('*[draggable!=true]','.slick-track').unbind('dragstart');
           $( ".draggable-element" ).draggable();
@@ -344,8 +468,9 @@ $conn->close();
   <script src="JavaScript/build.js"></script>
   <script >
   verify.addEventListener("click", function(){
-    if (confirm('¿Está seguro que este es el auto de sus sueños?')) {
-      window.location = "ending_es.php"; 
+    if (objects[0] != null && objects[1] != null && arrayBlockCounter >= 2)
+    if (confirm('Are you sure that this is the car of your dreams?')) {
+      window.location = "ending.php"; 
   }
   });
   </script>
@@ -394,13 +519,16 @@ $conn->close();
        });
   </script>
 
+  <!-- Code which takes the screenshoot and saves the img in the variable "imagen" as a png image by clicking the button "Print" -->
   <script type="text/javascript">
   $('#printimg').click(function(){
     var imagen;
     imagen = Render.domElement.toDataURL("image/png");
     window.open(imagen);
     });
-  });
+ 
   </script>
 
+<script>
+</script>
 </html>
