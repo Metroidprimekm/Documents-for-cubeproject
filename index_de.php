@@ -2,20 +2,22 @@
 
 <html>
 <head>
-	<!--         Lo de la FH             -->
+    <!--         Lo de la FH             -->
 <link rel="stylesheet" type"text/css" href="Styles/styles.css" />
 <title>Eng_FH Aachen: Manufacturing Cube/Index</title>
 
 <link rel="stylesheet" type="text/css" href="https://www.fh-aachen.de/typo3temp/stylesheet_0ade94ab98.css?1448379798" media="all" />
 <link rel="stylesheet" type="text/css" href="https://www.fh-aachen.de/fileadmin/template/css/fh.css?1450189426" media="all" />
 
+</head>
 
+<body>
 
 <div id="PAGE">
     <BUTTONBAR id="BUTTONBAR">
         <div id="language" title="Language">
         
-			 <a href="testindex.php" class="lang">
+             <a href="testindex.php" class="lang">
             <img src="Figures/english.png" width="30" height="20" >
             </a>
             <a href="index_es.php" class="lang">
@@ -88,32 +90,9 @@
         </script>
         
         <div id="TOPNAV"><span id="hilfsnavi_topnavi" class="invisible"><a href="#hilfsnavi_sprachwahl">Top-Navigation &uuml;berspringen</a></span>
-            <a href="index_de.php" title="Home">Home</a><a href="kontakt/" title="Contact">Kontact</a><a href="#" title="about us">&Uuml;ber uns</a>
+            <a href="index_de.php" title="Home">Home</a><a href="Contact_de.php" title="Contact">Kontact</a><a href="About_us_de.php" title="about us">&Uuml;ber uns </a>
         </div>
-        <div id="LOGIN">    
-            <a style="cursor:pointer" title="Öffnet die Login-Box" >Login</a><form style="visibility:hidden" action="/" name="loginbutton" method="post"><input type="hidden" name="995F472B" value="2060A5A289FD684BAD2756C18F7E4393"><input type="hidden" name="login" value="1"></form>
-            <div class="loginbox" id="LoginBox" onclick="document.getElementById('LoginBox').style.visibility='hidden';document.getElementById('LoginFrame').style.visibility='hidden'"></div><div class="loginframe" id="LoginFrame"><div class="content" >
 
-	<div class="tx-felogin-pi1">
-		
-<script language="javascript">
-  if ("<div></div>">"" && "<div></div>"!="<div></div>") {
-    text="<div></div>";
-    text=text.substr(5);
-    p=text.search(/<\/div>/);
-    text=text.substr(0,p);
-    alert(text);
-  }
-</script>
-
-
-	</div>
-	
-	<!-- END: Content of extension "felogin", plugin "tx_felogin_pi1" -->
-
-	</div></div>
-            
-        </div>
         
         <div id="SPRACHE">
             <span id="hilfsnavi_sprachwahl" class="invisible"><a href="#hilfsnavi_suche">Sprachumschaltung &uuml;berspringen</a></span>
@@ -134,33 +113,48 @@
         <div id="HEADNAV">
             <span id="hilfsnavi_headnavi" class="invisible"><a href="#hilfsnavi_navigation">Haupt-Navigation &uuml;berspringen</a></span>
             <div id="START" class="passiv"><a href="https://www1.fh-aachen.de" title="Startseite">Startseite</a></div>
-            <div class="passiv"><a href="index_de.php" title="Home" id="page_3" onmouseover="dropdown(3)" onmouseout="window.clearTimeout(drop)">Home icon</a></div><div class="passiv"><a href="#" title="Info" id="page_4" onmouseover="dropdown(4)" onmouseout="window.clearTimeout(drop)">&Uuml;ber uns</a></div><div class="passiv"><a href="#" title="contact" id="page_5" onmouseover="dropdown(5)" onmouseout="window.clearTimeout(drop)">Kontact</a></div><div class="passiv"><a href="hochschule/zentralverwaltung/dezernat-v-innovationstransfer/" title="Algotracosa" id="page_6" onmouseover="dropdown(6)" onmouseout="window.clearTimeout(drop)">Mehr</a></div>
+            <div class="passiv"><a href="index_de.php" title="Home" id="page_3" onmouseover="dropdown(3)" onmouseout="window.clearTimeout(drop)">Home</a></div><div class="passiv"><a href="About_us.html" title="Info" id="page_4" onmouseover="dropdown(4)" onmouseout="window.clearTimeout(drop)">&Uuml;ber uns </a></div><div class="passiv"><a href="Contact_de.php" title="contact" id="page_5" onmouseover="dropdown(5)" onmouseout="window.clearTimeout(drop)">Kontact</a></div><div class="passiv"><a href="https://www.fh-aachen.de/" title="Algotracosa" id="page_6" onmouseover="dropdown(6)" onmouseout="window.clearTimeout(drop)">Mehr</a></div>
         </div>
        
     </div>
 
-</head>
-
-	<!--         Lo de la FH             -->
-
-<body>
+    <!--         SEITE             -->
 
 
-	<center><h1 class="tittle">FH Aachen Manufacturing Cube</h1></br></center>
+<div id="SEITE">
+
+    
+    <a href="index_de.php" id="logo" title="zur Startseite"></a>
+
+            <div id="MAIN" class="none">
+
+                <div id="MAINNAV">
+                    <span id="hilfsnavi_navigation" class="invisible">
+                        <a href="#hilfsnavi_inhalt">Seiten-Navigation überspringen</a>
+                    </span>
+                    <ul id="BREADCRUMB_MAIN"> 
+                        <li style="color:#00b5ad;"> Registrieren </li>
+                    </ul>
+
+           <ul id="SEITENNAV"> 
+
+    <div id="dom-target" style="display: none;">
+<style>
+.error {color: #FF0000;}
+</style>	
 	
-	
-	<div id="dom-target" style="display: none;">
 <?php
 // define variables and set to empty values
+$nameErr = $emailErr ="";
 $name = $email = "";
 $maximo=0;
 
-	$servername = "localhost";
-	$username = "root";
-	$password = "projectcube";
-	$dbname = "project2";
-	
-	// Create connection
+    $servername = "localhost";
+    $username = "root";
+    $password = "projectcube";
+    $dbname = "project2";
+    
+    // Create connection
 $conn = new mysqli($servername, $username, $password, $dbname);
 // Check connection
 if ($conn->connect_error) {
@@ -174,66 +168,77 @@ if ($result->num_rows > 0) {
     // output data of each row
     while($row = $result->fetch_assoc()) {
         
-		$maximo=$maximo+1;
+        $maximo=$maximo+1;
     }
-	echo "OrderID: " . $maximo. "<br>";
+    echo "OrderID: " . $maximo. "<br>";
 } else {
     echo "0 results";
 }
 $conn->close();
 
-	if($row["identifier"]== $stock)
-		{echo $row["stock"]."<br>";}
+    if($row["identifier"]== $stock)
+        {echo $row["stock"]."<br>";}
 
 if ($_SERVER["REQUEST_METHOD"] == "POST") {
-   $name = test_input($_POST["name"]);
-   $email = test_input($_POST["email"]);
+   if (empty($_POST["name"])) {
+     $nameErr = "Name is required";
+   } else {
+     $name = test_input($_POST["name"]);
+   }
+  
+   if (empty($_POST["email"])) {
+     $emailErr = "Email is required";
+   } else {
+     $email = test_input($_POST["email"]);
+   }
    
-	$servername = "localhost";
-	$username = "root";
-	$password = "projectcube";
-	$dbname = "project2";
-	$last_id = $conn->insert_id;
-    //echo "New record created successfully. Last inserted ID is: " . $last_id;	
+    $servername = "localhost";
+    $username = "root";
+    $password = "projectcube";
+    $dbname = "project2";
+    $last_id = $conn->insert_id;
+    //echo "New record created successfully. Last inserted ID is: " . $last_id; 
+    
 	
-	// Create connection
-	$conn = new mysqli($servername, $username, $password, $dbname);    
-	// Check connection
-	if ($conn->connect_error) {
-		die("Connection failed: " . $conn->connect_error);
-	} 
-	// Write data in table
-	$sql = "INSERT INTO Users (email,Name)
-	VALUES ('$email', '$name')";
+	if(($_POST["email"])&&($_POST["name"]))
+	{
+		
+    // Create connection
+    $conn = new mysqli($servername, $username, $password, $dbname);    
+    // Check connection
+    if ($conn->connect_error) {
+        die("Connection failed: " . $conn->connect_error);
+    } 
+    // Write data in table
+    $sql = "INSERT INTO Users (email,Name)
+    VALUES ('$email', '$name')";
 
-	if ($conn->query($sql) === TRUE) {
+    if ($conn->query($sql) === TRUE) {
     echo "New record created successfully";
-	} else {
-		echo "Error: " . $sql . "<br>" . $conn->error;
-	}
-	
-	
-	 $sql = "INSERT INTO Orders (UserName,Status,OrderDate)
-	VALUES ('$name','pending',NOW())";
+    } else {
+        echo "Error: " . $sql . "<br>" . $conn->error;
+    }
+    
+     $sql = "INSERT INTO Orders (UserName,Status,OrderDate)
+    VALUES ('$name','pending',NOW())";
 
-	if ($conn->query($sql) === TRUE) {
-	$last_id = $conn->insert_id;
-    echo "New record created successfully. Last inserted ID is: " . $last_id;	
-	} else {
+    if ($conn->query($sql) === TRUE) {
+    $last_id = $conn->insert_id;
+    echo "New record created successfully. Last inserted ID is: " . $last_id;   
+    } else {
     echo "Error: " . $sql . "<br>" . $conn->error;
-	}	
-
+    }   
 
 ?>
-<script type="text/javascript">
+     <script type="text/javascript">
 window.location = "build_de.php";
-</script>
+</script>    
 <?php
-
-	$conn->close();
+	}
 	
-}
 
+    $conn->close(); 
+}
 
 
 function test_input($data) {
@@ -246,52 +251,88 @@ function test_input($data) {
 </div>
 
 
-
-<html>
-  <head>
-  </head>
-  <body>
-    <script>
-      //var js_var = "<?php echo $last_id; ?>";
-	  var js_var = <?php echo json_encode("$last_id"); ?>;
-       // alert("js_var="+ js_var);
-    </script>
-  </body>
-</html>
-
 <!-- <script>
     var div = document.getElementById("dom-target");
     var myData = div.textContent;
-	//alert("myData = " + myData);
+    //alert("myData = " + myData);
 </script> */-->
 
  
 
 <!--<h2>PHP Form Validation</h2> -->
-<form method="post" action="<?php echo htmlspecialchars($_SERVER["PHP_SELF"]);?>"> 
-   Name: <input type="text" name="name">
-   <br><br>
-   E-mail: <input type="text" name="email">
-   <br><br>
-   <input type="submit" name="submit" value="submit" >
+
+
+<form method="post" action="<?php echo htmlspecialchars($_SERVER["PHP_SELF"]);?>">
+   <p><span class="error">* Erforderliches Feld.</span></p>
+   <li><span class="error">*</span> Name: <input type="text" name="name"></li>
+   <span class="error"> <?php echo $nameErr;?></span>   
+   <li><span class="error">*</span> E-mail: <input type="text" name="email"> </li>
+      <span class="error"><?php echo $emailErr;?></span>
+	  </br>   
+   <input type="submit" name="submit" value="GO!" >
    
 </form>
 
+  </ul> 
 
-<?php
+</div>
+</div>
 
-/* echo "<h2>Your Input:</h2>";
-echo $name;
-echo "<br>";
-echo $email;
-echo "<br>"; */
+ <div id="INHALT_MAIN">
+
+    <center><h1 class="tittle">FH Aachen Manufacturing Cube</h1></br></center>
+
+     <center><img src="Figures/cube.png" alt="CUBE"/></center></br>
+
+</div>  
+
+<div id="FOOTER">
+            <div id="BREADCRUMB_FOOTER">
+                
+            </div>
+            <div class="mobil" id="TOPNAV">
+                <h2>FH Direkt</h2><a href="kontakt/" title="Kontaktinformationen der FH Aachen">Kontakt/Hilfe</a><a href="hochschule/zentralverwaltung/dezernat-i-personal/stellenanzeigen/" title="Stellenanzeigen">Stellenanzeigen</a><a href="presse/" title="Presseinformationen der FH Aachen">Presse</a><a href="topnavi/telefonbuch/" title="Telefonbuch">Telefonbuch</a><a href="downloads/?no_cache=1" title="Formulare, Flyer, Broschüren, Informationen, ...">Downloads</a>
+            </div>
+            <div id="INHALT_FOOTER">
+			
+	<div class="SOCIAL">  
+		<div>
+			<a href="https://www.facebook.com/profile.php?id=100011965921173" target="_blank">
+				<img border="0" height="52" width="178" src="Figures/fb.png">
+			</a>
+		</div>
+	</div>
+
+                <div class="STD NO_1">
+    <!--  CONTENT ELEMENT, uid:43/text [begin] -->
+        <div id="c43" class="csc-default">
+        <!--  Header: [begin] -->
+            <div class="csc-header csc-header-n1"><h2 class="csc-firstHeader">Kontakt</h2></div>
+        <!--  Header: [end] -->
+            
+        <!--  Text: [begin] -->
+            <p class="bodytext"><b>FH Aachen<br></b>Postfach 100 560<br>52005 Aachen<br>T +49.241.6009 0<br>F +49.241.6009 51090</p>
+        <!--  Text: [end] -->
+            </div>
+    <!--  CONTENT ELEMENT, uid:43/text [end] -->
+        </div>
+               
+            </div>
 
 
-?>
+        <div style="clear: both;"></div>
+        </div>
 
- 	 <center><img src="Figures/cube.png" alt="CUBE"/></center></br>
-		
-	</body>
+
+<!-- Close <div> of SEITE -->
+</div>
+<!-- Close <div> of PAGE -->
+</div>
+
+
+        
+    </body>
+
 
 
 </html>

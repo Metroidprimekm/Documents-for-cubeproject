@@ -17,13 +17,13 @@
     <BUTTONBAR id="BUTTONBAR">
         <div id="language" title="Language">
         
-			 <a href="testindex.php" class="lang">
+			 <a href="Contact.php" class="lang">
             <img src="Figures/english.png" width="30" height="20" >
             </a>
-            <a href="index_es.php" class="lang">
+            <a href="Contact_es.php" class="lang">
             <img src="Figures/espanol.png" width="30" height="20" >
             </a>
-            <a href="index_de.php" class="lang">
+            <a href="Contact_de.php" class="lang">
             <img src="Figures/deutsch.png" width="30" height="20" >
             </a>
 
@@ -96,13 +96,13 @@
         
         <div id="SPRACHE">
             <span id="hilfsnavi_sprachwahl" class="invisible"><a href="#hilfsnavi_suche">Sprachumschaltung &uuml;berspringen</a></span>
-            <a href="testindex.php" class="lang">
+            <a href="Contact.php" class="lang">
             <img src="Figures/english.png" width="30" height="20" >
             </a>
-            <a href="index_es.php" class="lang">
+            <a href="Contact_es.php" class="lang">
             <img src="Figures/espanol.png" width="30" height="20" >
             </a>
-            <a href="index_de.php" class="lang">
+            <a href="Contact_de.php" class="lang">
             <img src="Figures/deutsch.png" width="30" height="20" >
             </a>
         </div>
@@ -124,7 +124,7 @@
 <div id="SEITE">
 
 	
-    <a href="testindex.html" id="logo" title="zur Startseite"></a>
+    <a href="testindex.php" id="logo" title="zur Startseite"></a>
 
             <div id="MAIN" class="none">
 
@@ -164,6 +164,14 @@
                 <h2>FH Direkt</h2><a href="kontakt/" title="Kontaktinformationen der FH Aachen">Kontakt/Hilfe</a><a href="hochschule/zentralverwaltung/dezernat-i-personal/stellenanzeigen/" title="Stellenanzeigen">Stellenanzeigen</a><a href="presse/" title="Presseinformationen der FH Aachen">Presse</a><a href="topnavi/telefonbuch/" title="Telefonbuch">Telefonbuch</a><a href="downloads/?no_cache=1" title="Formulare, Flyer, Broschüren, Informationen, ...">Downloads</a>
             </div>
             <div id="INHALT_FOOTER">
+			
+	<div class="SOCIAL">  
+		<div>
+			<a href="https://www.facebook.com/profile.php?id=100011965921173" target="_blank">
+				<img border="0" height="52" width="178" src="Figures/fb.png">
+			</a>
+		</div>
+	</div>
 
                 <div class="STD NO_1">
     <!--  CONTENT ELEMENT, uid:43/text [begin] -->

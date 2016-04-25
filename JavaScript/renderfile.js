@@ -30,8 +30,8 @@ ok = !ok;
 	// la Figura 
 	var Figura;
 	var controls;
-	var Ancho=window.innerWidth*.45;
-	var Alto=window.innerHeight*.78;
+	var Ancho=window.innerWidth*.32;
+	var Alto=window.innerHeight*.6;
 	var Territorio;
 	var object;
 	var Angulo = 45;	
@@ -1410,7 +1410,7 @@ ok = !ok;
 	
 	var first = objects[count];	
 	Escenario.remove(first);
-	objects.pop();
+	
 	
 	if( !ok1 )
 		ok1 = true;
@@ -1426,6 +1426,7 @@ ok = !ok;
 	
 	if (first.Type == "Chassis"){
 		bChasis = false;
+		objects.pop();
 		for (var k = 0; k<= array_llantas.length; k++){
 			
 			Escenario.remove(array_llantas[k]);		
@@ -1438,9 +1439,9 @@ ok = !ok;
 	//alert("MaxX " + maxX + " MaxZ " + maxZ );
 	
 	//For para escribir la posicion de la pieza en las filas de la matriz
-	for(var h = 0; h< object.height; h++){
+	for(var h = 0; h< first.objHeight; h++){
 		//For para escribir la posicion de la pieza en las columnas de la matriz
-		for(var j = 0; j< object.length; j++){
+		for(var j = 0; j< first.objLength; j++){
 			
 			//Escritura de la posicion exacta dentro de la matriz
 			//Value es la variable con la posicion de la primer columna de la pieza
@@ -1460,6 +1461,7 @@ ok = !ok;
 	
 	
 	ajaxDelete();
+	objects.pop();
 	delete(arrayBlock[arrayBlockCounter]);
 	
 	} }

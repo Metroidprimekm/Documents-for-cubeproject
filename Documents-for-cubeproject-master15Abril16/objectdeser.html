@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+   <head>
+      <script>
+         function loadXMLDoc(filename)
+         {
+            if (window.XMLHttpRequest)
+            {
+                xhttp = new XMLHttpRequest();
+            }
+            else // code for IE5 and IE6
+            {
+                xhttp = new ActiveXObject("Microsoft.XMLHTTP");
+            }
+            xhttp.open("GET",filename,false);
+            xhttp.send();
+            return xhttp.responseXML;
+        }
+      </script>
+   </head>
+   <body>
+      <script>
+         xmlDoc = loadXMLDoc("node.xml");
+
+         x = xmlDoc.getElementsByTagName("Email");
+	for(i =0 ;i<x.length;i++){	
+	
+	 x[i].childNodes[0].nodeValue = "support@xyz.com";
+	 document.write(i+') ');
+	 document.write(x[i].childNodes[0].nodeValue);
+	 document.write('<br>');
+	}
+	
+      </script>
+   </body>
+</html>

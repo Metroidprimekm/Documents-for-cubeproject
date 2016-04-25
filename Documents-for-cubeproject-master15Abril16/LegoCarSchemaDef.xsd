@@ -1,0 +1,95 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema">
+
+	<!-- definition of simple types -->
+	<xs:simpleType name="OrderIDType">
+		<xs:restriction base="xs:string">
+			<xs:pattern value="[0-9]{6}"/>
+		</xs:restriction>
+	</xs:simpleType>
+
+	<xs:simpleType name="PartCodeType">
+		<xs:restriction base="xs:string">
+			<xs:enumeration value="6050965"/>
+			<xs:enumeration value="6078317"/>
+			<xs:enumeration value="6100058"/>
+			<xs:enumeration value="6004947"/>
+			<xs:enumeration value="343724"/>
+			<xs:enumeration value="6030817"/>
+			<xs:enumeration value="6031324"/>
+			<xs:enumeration value="4160152"/>
+			<xs:enumeration value="6001240"/>
+			<xs:enumeration value="343721"/>
+			<xs:enumeration value="6020412"/>
+			<xs:enumeration value="6020150"/>
+			<xs:enumeration value="6020134"/>
+			<xs:enumeration value="301121"/>
+			<xs:enumeration value="4515331"/>
+			<xs:enumeration value="6058256"/>
+			<xs:enumeration value="6020110"/>
+			<xs:enumeration value="4183780"/>
+			<xs:enumeration value="4652863"/>
+			<xs:enumeration value="4166923"/>
+			<xs:enumeration value="4168579"/>
+			<xs:enumeration value="6025187"/>
+			<xs:enumeration value="4170795"/>
+			<xs:enumeration value="4247780"/>
+			<xs:enumeration value="4541728"/>
+			<xs:enumeration value="4620515"/>
+			<xs:enumeration value="4167177"/>
+			<xs:enumeration value="6023087"/>
+			<xs:enumeration value="6048908"/>
+			<xs:enumeration value="6048907"/>
+			<xs:enumeration value="6048909"/>
+		</xs:restriction>
+	</xs:simpleType>
+
+	<xs:simpleType name="PosXType">
+		<xs:restriction base="xs:integer">
+			<xs:minInclusive value="1"/>
+			<xs:maxInclusive value="16"/>	
+		</xs:restriction>
+	</xs:simpleType>
+
+	<xs:simpleType name="PosZType">
+		<xs:restriction base="xs:integer">
+			<xs:minInclusive value="1"/>
+			<xs:maxInclusive value="6"/>	
+		</xs:restriction>
+	</xs:simpleType>
+
+	<xs:simpleType name="BlockTypeType">
+		<xs:restriction base="xs:string">
+			<xs:enumeration value="Normal"/>
+			<xs:enumeration value="Special"/>
+		</xs:restriction>
+	</xs:simpleType>
+
+	<!-- definition of complex types -->
+	<xs:complexType name="ChassisType">
+		<xs:sequence>
+		<xs:element name="PartCode" type="PartCodeType"/>
+		</xs:sequence>
+	</xs:complexType>
+
+	<xs:complexType name="LegoBlockType">
+		<xs:sequence>
+		<xs:element name="PartCode" type="PartCodeType"/>
+		<xs:element name="PositionX" type="PosXType"/>
+		<xs:element name="PositionZ" type="PosZType"/>
+		<xs:element name="BlockType" type="BlockTypeType"/>
+		</xs:sequence>
+	</xs:complexType>
+
+	<xs:complexType name="LegoCarType">
+		<xs:sequence>
+		<xs:element name="OrderID" type="OrderIDType"/>
+		<xs:element name="Chassis" type="ChassisType"/>
+		<xs:element name="LegoBlock" type="LegoBlockType" maxOccurs="40"/>
+		</xs:sequence>
+	</xs:complexType>
+
+	<!-- definition of the main object -->
+	<xs:element name="LegoCar" type="LegoCarType"/>
+
+</xs:schema>

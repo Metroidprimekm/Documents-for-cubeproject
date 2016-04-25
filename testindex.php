@@ -90,32 +90,9 @@
         </script>
         
         <div id="TOPNAV"><span id="hilfsnavi_topnavi" class="invisible"><a href="#hilfsnavi_sprachwahl">Top-Navigation &uuml;berspringen</a></span>
-            <a href="testindex.php" title="Home">Home</a><a href="kontakt/" title="Contact">Contact</a><a href="#" title="about us">About us</a>
+            <a href="testindex.php" title="Home">Home</a><a href="Contact.php" title="Contact">Contact</a><a href="About_us.php" title="about us">About us</a>
         </div>
-        <div id="LOGIN">    
-            <a style="cursor:pointer" title="Öffnet die Login-Box" >Login</a><form style="visibility:hidden" action="/" name="loginbutton" method="post"><input type="hidden" name="995F472B" value="2060A5A289FD684BAD2756C18F7E4393"><input type="hidden" name="login" value="1"></form>
-            <div class="loginbox" id="LoginBox" onclick="document.getElementById('LoginBox').style.visibility='hidden';document.getElementById('LoginFrame').style.visibility='hidden'"></div><div class="loginframe" id="LoginFrame"><div class="content" >
 
-	<div class="tx-felogin-pi1">
-		
-<script language="javascript">
-  if ("<div></div>">"" && "<div></div>"!="<div></div>") {
-    text="<div></div>";
-    text=text.substr(5);
-    p=text.search(/<\/div>/);
-    text=text.substr(0,p);
-    alert(text);
-  }
-</script>
-
-
-	</div>
-	
-	<!-- END: Content of extension "felogin", plugin "tx_felogin_pi1" -->
-
-	</div></div>
-            
-        </div>
         
         <div id="SPRACHE">
             <span id="hilfsnavi_sprachwahl" class="invisible"><a href="#hilfsnavi_suche">Sprachumschaltung &uuml;berspringen</a></span>
@@ -136,12 +113,10 @@
         <div id="HEADNAV">
             <span id="hilfsnavi_headnavi" class="invisible"><a href="#hilfsnavi_navigation">Haupt-Navigation &uuml;berspringen</a></span>
             <div id="START" class="passiv"><a href="https://www1.fh-aachen.de" title="Startseite">Startseite</a></div>
-            <div class="passiv"><a href="testindex.php" title="Home" id="page_3" onmouseover="dropdown(3)" onmouseout="window.clearTimeout(drop)">Home icon</a></div><div class="passiv"><a href="#" title="Info" id="page_4" onmouseover="dropdown(4)" onmouseout="window.clearTimeout(drop)">About us</a></div><div class="passiv"><a href="#" title="contact" id="page_5" onmouseover="dropdown(5)" onmouseout="window.clearTimeout(drop)">Contact</a></div><div class="passiv"><a href="hochschule/zentralverwaltung/dezernat-v-innovationstransfer/" title="Algotracosa" id="page_6" onmouseover="dropdown(6)" onmouseout="window.clearTimeout(drop)">More</a></div>
+            <div class="passiv"><a href="testindex.php" title="Home" id="page_3" onmouseover="dropdown(3)" onmouseout="window.clearTimeout(drop)">Home icon</a></div><div class="passiv"><a href="About_us.php" title="Info" id="page_4" onmouseover="dropdown(4)" onmouseout="window.clearTimeout(drop)">About us</a></div><div class="passiv"><a href="Contact.php" title="contact" id="page_5" onmouseover="dropdown(5)" onmouseout="window.clearTimeout(drop)">Contact</a></div><div class="passiv"><a href="https://www.fh-aachen.de/" title="Algotracosa" id="page_6" onmouseover="dropdown(6)" onmouseout="window.clearTimeout(drop)">More</a></div>
         </div>
        
     </div>
-
-
 
 	<!--         SEITE             -->
 
@@ -149,8 +124,7 @@
 <div id="SEITE">
 
 	
-
-    <a href="testindex.html" id="logo" title="zur Startseite"></a>
+    <a href="testindex.php" id="logo" title="zur Startseite"></a>
 
             <div id="MAIN" class="none">
 
@@ -165,8 +139,14 @@
            <ul id="SEITENNAV"> 
 
 	<div id="dom-target" style="display: none;">
+	
+<style>
+.error {color: #FF0000;}
+</style>
+
 <?php
 // define variables and set to empty values
+$nameErr = $emailErr ="";
 $name = $email = "";
 $maximo=0;
 
@@ -201,8 +181,17 @@ $conn->close();
 		{echo $row["stock"]."<br>";}
 
 if ($_SERVER["REQUEST_METHOD"] == "POST") {
-   $name = test_input($_POST["name"]);
-   $email = test_input($_POST["email"]);
+   if (empty($_POST["name"])) {
+     $nameErr = "Name is required";
+   } else {
+     $name = test_input($_POST["name"]);
+   }
+  
+   if (empty($_POST["email"])) {
+     $emailErr = "Email is required";
+   } else {
+     $email = test_input($_POST["email"]);
+   }
    
 	$servername = "localhost";
 	$username = "root";
@@ -210,6 +199,9 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 	$dbname = "project2";
 	$last_id = $conn->insert_id;
     //echo "New record created successfully. Last inserted ID is: " . $last_id;	
+	
+	if(($_POST["email"])&&($_POST["name"]))
+	{
 	
 	// Create connection
 	$conn = new mysqli($servername, $username, $password, $dbname);    
@@ -227,7 +219,6 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 		echo "Error: " . $sql . "<br>" . $conn->error;
 	}
 	
-	
 	 $sql = "INSERT INTO Orders (UserName,Status,OrderDate)
 	VALUES ('$name','pending',NOW())";
 
@@ -237,13 +228,14 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 	} else {
     echo "Error: " . $sql . "<br>" . $conn->error;
 	}	
-
-
+	
 ?>
 <script type="text/javascript">
 window.location = "build.php";
-</script>
+</script>    
 <?php
+	}
+
 
 	$conn->close();	
 }
@@ -271,13 +263,13 @@ function test_input($data) {
 
 
 <form method="post" action="<?php echo htmlspecialchars($_SERVER["PHP_SELF"]);?>">
-   <li> Name: <input type="text" name="name"></li>
-   <li> E-mail: <input type="text" name="email"> </li>
-   <a href="build.php" class="lang"><input type="submit" name="submit" value="GO!" ></a>
-   
-   
-            
-            
+   <p><span class="error">* Required field.</span></p>
+   <li><span class="error">*</span> Name: <input type="text" name="name"></li>
+   <span class="error"> <?php echo $nameErr;?></span>
+   <li><span class="error">*</span> E-mail: <input type="text" name="email"> </li>
+      <span class="error"><?php echo $emailErr;?></span>
+	  </br>
+   <input type="submit" name="submit" value="GO!" >
    
 </form>
 
@@ -302,6 +294,14 @@ function test_input($data) {
                 <h2>FH Direkt</h2><a href="kontakt/" title="Kontaktinformationen der FH Aachen">Kontakt/Hilfe</a><a href="hochschule/zentralverwaltung/dezernat-i-personal/stellenanzeigen/" title="Stellenanzeigen">Stellenanzeigen</a><a href="presse/" title="Presseinformationen der FH Aachen">Presse</a><a href="topnavi/telefonbuch/" title="Telefonbuch">Telefonbuch</a><a href="downloads/?no_cache=1" title="Formulare, Flyer, Broschüren, Informationen, ...">Downloads</a>
             </div>
             <div id="INHALT_FOOTER">
+			
+	<div class="SOCIAL">  
+		<div>
+			<a href="https://www.facebook.com/profile.php?id=100011965921173" target="_blank">
+				<img border="0" height="52" width="178" src="Figures/fb.png">
+			</a>
+		</div>
+	</div>
 
                 <div class="STD NO_1">
     <!--  CONTENT ELEMENT, uid:43/text [begin] -->

@@ -105,12 +105,12 @@ var didi=1;
                 $("#accordion_"+id+"_gross_B").hide(0);
             }
         </script>
-        
-      
+
+
         <div id="TOPNAV"><span id="hilfsnavi_topnavi" class="invisible"><a href="#hilfsnavi_sprachwahl">Top-Navigation &uuml;berspringen</a></span>
-            <a href="testindex.php" title="Home">Home</a><a href="Contact.html" title="Contact">Kontact</a><a href="About_us.html" title="about us">&Uuml;ber uns</a>        
+            <a href="index_de.php" title="Home">Home</a><a href="Contact_de.php" title="Contact">Kontact</a><a href="About_us_de.html" title="about us">&Uuml;ber uns</a>        
         </div>
-        
+
         <div id="SPRACHE">
             <span id="hilfsnavi_sprachwahl" class="invisible"><a href="#hilfsnavi_suche">Sprachumschaltung &uuml;berspringen</a></span>
             <a href="build.php" class="lang">
@@ -127,9 +127,9 @@ var didi=1;
         <div id="HEADNAV">
             <span id="hilfsnavi_headnavi" class="invisible"><a href="#hilfsnavi_navigation">Haupt-Navigation &uuml;berspringen</a></span>
             <!-- <div id="START" class="passiv"><a href="https://www1.fh-aachen.de" title="Startseite">Startseite</a></div> -->
-            <div class="passiv"><a href="testindex.php" title="Home" id="page_3" onmouseover="dropdown(3)" onmouseout="window.clearTimeout(drop)">Home</a></div><div class="passiv"><a href="About_us.html" title="Info" id="page_4" onmouseover="dropdown(4)" onmouseout="window.clearTimeout(drop)">&Uuml;ber uns</a></div><div class="passiv"><a href="Contact.html" title="contact" id="page_5" onmouseover="dropdown(5)" onmouseout="window.clearTimeout(drop)">Kontact</a></div><div class="passiv"><a href="https://www.fh-aachen.de/" title="Algotracosa" id="page_6" onmouseover="dropdown(6)" onmouseout="window.clearTimeout(drop)">Mehr</a></div>
+            <div class="passiv"><a href="index_de.php" title="Home" id="page_3" onmouseover="dropdown(3)" onmouseout="window.clearTimeout(drop)">Home</a></div><div class="passiv"><a href="About_us_de.html" title="Info" id="page_4" onmouseover="dropdown(4)" onmouseout="window.clearTimeout(drop)">&Uuml;ber uns</a></div><div class="passiv"><a href="Contact_de.html" title="contact" id="page_5" onmouseover="dropdown(5)" onmouseout="window.clearTimeout(drop)">Kontact</a></div><div class="passiv"><a href="https://www.fh-aachen.de/" title="Algotracosa" id="page_6" onmouseover="dropdown(6)" onmouseout="window.clearTimeout(drop)">Mehr</a></div>
         </div>
-       
+
     </div>
 
   <!--         Lo de la FH             -->
@@ -139,7 +139,7 @@ var didi=1;
   <script src="http://code.jquery.com/ui/1.10.4/jquery-ui.js"></script>
 
 <div id="SEITE">
-    <a href="testindex.html" id="logo" title="zur Startseite"></a>
+    <a href="index_de.php" id="logo" title="zur Startseite"></a>
 
   
   <style> 
@@ -193,7 +193,7 @@ var didi=1;
                         <li><a id="show_body_2x8x1_V"><img src="Figures/Legos/4247780.png"></a></li>
                         <li><a id="show_body_2x6_1_A"><img src="Figures/Legos/6023087.png"></a></li>
                         <li><a id="show_body_2x4x2_R"><img src="Figures/Legos/301121.png"></a></li>
-                        <li><a id="show_tanque"><img src="Figures/Legos/6001240.png"></a></li>
+                        
 
                     </ul>
                     <a href="#" class="prev">&lsaquo;</a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
@@ -211,13 +211,14 @@ var didi=1;
                                
                 <div class="carousel">
                     <ul>
+						<li><a id="show_tanque"><img src="Figures/Legos/6001240.png"></a></li>
                         <li><a id="show_techo_2x3x2_A"><img src="Figures/Legos/4541728.png"></a></li>
                         <li><a id="show_techo_2x4x2_V"><img src="Figures/Legos/4652863.png"></a></li>
                         <li><a id="show_techo_2x3x2_B"><img src="Figures/Legos/6004947.png"></a></li>
                         <li><a id="show_ventana_2x3x2_A"><img src="Figures/Legos/6020110.png"></a></li>
                         <li><a id="show_ventana_2x4x2_R"><img src="Figures/Legos/6020134.png"></a></li>
                         <li><a id="show_techo_2x3x3_R"><img src="Figures/Legos/6020150.png"></a></li>
-                        <li><a id="show_ventana_2x2x3_R"><img src="Figures/Legos/6020412.png"></a></li>
+                        <li><a id="show_ventana_2x2x2_R"><img src="Figures/Legos/6020412.png"></a></li>
                         <li><a id="show_ventana_2x2x2_V"><img src="Figures/Legos/6025187.png"></a></li>
                     </ul>
                 <a href="#" class="prev">&lsaquo;</a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
@@ -369,7 +370,7 @@ $conn->close();
 <div id="INHALT_MAIN">
 <p><i> 
 Nutz die Pfeile, wenn Sie den Legostein rechts oder links bewegen m&ouml;chten. Dann drucken Sie "ok" wenn Sie den Legostein aufstellen m&ouml;chten.
-Wenn Sie schon fertig sein, bitte drucken Sie den gr&uuml;ne Pfeil und Ihr Auto wird gebeudet werde. Wenn sie einen Legostein entrefen, bitte drucken Sie das rote Kruez. </p>
+Wenn Sie schon fertig sein, bitte drucken Sie den gr&uuml;ne Pfeil und Ihr Auto wird gebeudet werde. Wenn sie einen Legostein entrefen m&oumlchten, bitte drucken Sie das rote Kruez. </p>
 </br></i>
 <center>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
     <a onclick="izq = !izq;" href="#" ><img src="Figures/flechaizq.png"></a>&nbsp;&nbsp;&nbsp;
@@ -397,6 +398,14 @@ Wenn Sie schon fertig sein, bitte drucken Sie den gr&uuml;ne Pfeil und Ihr Auto 
                 <h2>FH Direkt</h2><a href="kontakt/" title="Kontaktinformationen der FH Aachen">Kontakt/Hilfe</a><a href="hochschule/zentralverwaltung/dezernat-i-personal/stellenanzeigen/" title="Stellenanzeigen">Stellenanzeigen</a><a href="presse/" title="Presseinformationen der FH Aachen">Presse</a><a href="topnavi/telefonbuch/" title="Telefonbuch">Telefonbuch</a><a href="downloads/?no_cache=1" title="Formulare, Flyer, Broschüren, Informationen, ...">Downloads</a>
             </div>
             <div id="INHALT_FOOTER">
+			
+	<div class="SOCIAL">  
+		<div>
+			<a href="https://www.facebook.com/profile.php?id=100011965921173" target="_blank">
+				<img border="0" height="52" width="178" src="Figures/fb.png">
+			</a>
+		</div>
+	</div>
 
                 <div class="STD NO_1">
     <!--  CONTENT ELEMENT, uid:43/text [begin] -->
@@ -453,7 +462,11 @@ Wenn Sie schon fertig sein, bitte drucken Sie den gr&uuml;ne Pfeil und Ihr Auto 
             $("#show_techo_2x3x2_B").draggable({revert:true});
             $("#show_techo_2x4x2_V").draggable({revert:true});
             $("#show_techo_2x1x3_A").draggable({revert:true});
-            
+            $("#show_ventana_2x3x2_A").draggable({revert:true});
+			$("#show_ventana_2x4x2_R").draggable({revert:true});
+			$("#show_ventana_2x2x2_R").draggable({revert:true});
+			$("#show_ventana_2x2x2_V").draggable({revert:true});
+			
        $(function() {
           $('*[draggable!=true]','.slick-track').unbind('dragstart');
           $( ".draggable-element" ).draggable();
@@ -468,10 +481,11 @@ Wenn Sie schon fertig sein, bitte drucken Sie den gr&uuml;ne Pfeil und Ihr Auto 
   <script src="JavaScript/build.js"></script>
   <script >
   verify.addEventListener("click", function(){
-    if (objects[0] != null && objects[1] != null && arrayBlockCounter >= 2)
-    if (confirm('Are you sure that this is the car of your dreams?')) {
-      window.location = "ending.php"; 
-  }
+    if (objects[0] != null && objects[1] != null && objects[2] != null && arrayBlockCounter >= 3){
+    if (confirm('Sind Sie sicher, dass dies Ihe Traumauto ist?')) {
+      window.location = "ending_de.php"; 
+  }} else
+	 alert("Man muss zumindest einen Chasis und zwei Legosteine aufstellen")
   });
   </script>
 
