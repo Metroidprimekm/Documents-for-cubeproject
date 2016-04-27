@@ -496,10 +496,11 @@ When you are finish of building your car, press the green arrow to go next. If w
   <script src="JavaScript/build.js"></script>
   <script >
   verify.addEventListener("click", function(){
-    if (objects[0] != null && objects[1] != null && arrayBlockCounter >= 2)
+    if (objects[0] != null && objects[1] != null && objects[2] != null && arrayBlockCounter >= 3){
     if (confirm('Are you sure that this is the car of your dreams?')) {
       window.location = "ending.php"; 
-  }
+  }} else
+	  alert("You must place at least a Chassis and two lego pieces")
   });
   </script>
 
