@@ -1,64 +1,23 @@
 <! DOCTYPE html>
 
 <html>
-
 <head>
-<!--   <link rel="stylesheet" type"text/css" href="Styles/styles.css" />
-  <link rel="stylesheet" href="Styles/style-test.css" /> -->
-
-  <title>Manufacturing Cube</title>
-  
- <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-<!-- 
-  This website is powered by TYPO3 - inspiring people to share!
-  TYPO3 is a free open source Content Management Framework initially created by Kasper Skaarhoj and licensed under GNU/GPL.
-  TYPO3 is copyright 1998-2015 of Kasper Skaarhoj. Extensions are copyright of their respective owners.
-  Information and contribution at http://typo3.org/
--->
-
-<title>Eng_FH Aachen Manufacturing Cube</title>
-<meta name="generator" content="TYPO3 CMS" />
-<meta name="KEYWORDS" content="FH Aachen, Fachhochschule Aachen, FH, Fachhochschule, Aachen, Universität, Vorlesung, Lehre" />
-<meta name="DESCRIPTION" content="FH Aachen" />
-<meta name="ABSTRACT" content="FH Aachen" />
-
+	<!--         Lo de la FH             -->
+<link rel="stylesheet" type"text/css" href="Styles/styles.css" />
+<title>Eng_FH Aachen: Manufacturing Cube/Index</title>
 
 <link rel="stylesheet" type="text/css" href="https://www.fh-aachen.de/typo3temp/stylesheet_0ade94ab98.css?1448379798" media="all" />
 <link rel="stylesheet" type="text/css" href="https://www.fh-aachen.de/fileadmin/template/css/fh.css?1450189426" media="all" />
 
-
-<script src="https://www.fh-aachen.de/typo3temp/javascript_9a38f34785.js?1448379647" type="text/javascript"></script>
-
-
-<meta http-equiv="X-UA-Compatible" content="IE=edge"/>
-<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no"><link rel="alternate" type="application/rss+xml" title="RSS-Feed" href="https://www.fh-aachen.de/rss/?type=100"/><script>
-  (function() {
-    var cx = '002441254131702830721:WMX-312018992';
-    var gcse = document.createElement('script'); 
-    gcse.type = 'text/javascript'; 
-    gcse.async = true;
-    gcse.src = (document.location.protocol == 'https:' ? 'https:' : 'http:') +
-        '//www.google.com/cse/cse.js?cx=' + cx;
-    var s = document.getElementsByTagName('script')[0]; 
-    s.parentNode.insertBefore(gcse, s);
-  })();
-</script>  <meta name="google-site-verification" content="kH_RxWSIyv4E1jM5_6lCC7A48p7qGijNkOHLAuAeVDo" />   <script src="https://www.fh-aachen.de/fileadmin/scripts/jquery.min.js" type="text/javascript"></script>
-   <script src="https://www.fh-aachen.de/fileadmin/scripts/jquery-ui.min.js" type="text/javascript"></script>    <script src="https://www.fh-aachen.de/fileadmin/template/scripts.js" type="text/javascript"></script>
-    <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
-    <link rel="alternate" type="application/rss+xml" title="RSS-Feed" href="https://www.fh-aachen.de/rss/?type=100"/>
-    <link href="https://www.fh-aachen.de/fileadmin/template/pics/favicon.ico" rel="shortcut icon" type="image/x-icon" />
-
-
-<script type="text/javascript">var TYPO3FrontendLoginFormRsaEncryptionPublicKeyUrl = 'index.php?eID=FrontendLoginRsaPublicKey';</script><script type="text/javascript" src="https://www.fh-aachen.de/typo3/sysext/rsaauth/resources/jsbn/jsbn.js"></script><script type="text/javascript" src="https://www.fh-aachen.de/typo3/sysext/rsaauth/resources/jsbn/prng4.js"></script><script type="text/javascript" src="https://www.fh-aachen.de/typo3/sysext/rsaauth/resources/jsbn/rng.js"></script><script type="text/javascript" src="https://www.fh-aachen.de/typo3/sysext/rsaauth/resources/jsbn/rsa.js"></script><script type="text/javascript" src="https://www.fh-aachen.de/typo3/sysext/rsaauth/resources/jsbn/base64.js"></script><script type="text/javascript" src="https://www.fh-aachen.de/typo3/sysext/rsaauth/resources/FrontendLoginFormRsaEncryption.min.js"></script>
 </head>
-<body>
 
+<body>
 
 <div id="PAGE">
     <BUTTONBAR id="BUTTONBAR">
         <div id="language" title="Language">
         
-       <a href="ending.php" class="lang">
+			 <a href="ending.php" class="lang">
             <img src="Figures/english.png" width="30" height="20" >
             </a>
             <a href="ending_es.php" class="lang">
@@ -130,11 +89,10 @@
             }
         </script>
         
-     
-      
         <div id="TOPNAV"><span id="hilfsnavi_topnavi" class="invisible"><a href="#hilfsnavi_sprachwahl">Top-Navigation &uuml;berspringen</a></span>
-            <a href="testindex.php" title="Home">Home</a><a href="Contact.html" title="Contact">Contact</a><a href="About_us.html" title="about us">About us</a>
+            <a href="testindex.php" title="Home">Home</a><a href="Contact.php" title="Contact">Contact</a><a href="About_us.php" title="about us">About us</a>
         </div>
+
         
         <div id="SPRACHE">
             <span id="hilfsnavi_sprachwahl" class="invisible"><a href="#hilfsnavi_suche">Sprachumschaltung &uuml;berspringen</a></span>
@@ -148,22 +106,94 @@
             <img src="Figures/deutsch.png" width="30" height="20" >
             </a>
         </div>
+            
+            
+        
 
         <div id="HEADNAV">
             <span id="hilfsnavi_headnavi" class="invisible"><a href="#hilfsnavi_navigation">Haupt-Navigation &uuml;berspringen</a></span>
             <div id="START" class="passiv"><a href="https://www1.fh-aachen.de" title="Startseite">Startseite</a></div>
-            <div class="passiv"><a href="testindex.php" title="Home" id="page_3" onmouseover="dropdown(3)" onmouseout="window.clearTimeout(drop)">Home icon</a></div><div class="passiv"><a href="About_us.html" title="Info" id="page_4" onmouseover="dropdown(4)" onmouseout="window.clearTimeout(drop)">About us</a></div><div class="passiv"><a href="Contact.html" title="contact" id="page_5" onmouseover="dropdown(5)" onmouseout="window.clearTimeout(drop)">Contact</a></div><div class="passiv"><a href="https://www.fh-aachen.de/" title="Algotracosa" id="page_6" onmouseover="dropdown(6)" onmouseout="window.clearTimeout(drop)">More</a></div>
+            <div class="passiv"><a href="testindex.php" title="Home" id="page_3" onmouseover="dropdown(3)" onmouseout="window.clearTimeout(drop)">Home icon</a></div><div class="passiv"><a href="About_us.php" title="Info" id="page_4" onmouseover="dropdown(4)" onmouseout="window.clearTimeout(drop)">About us</a></div><div class="passiv"><a href="Contact.php" title="contact" id="page_5" onmouseover="dropdown(5)" onmouseout="window.clearTimeout(drop)">Contact</a></div><div class="passiv"><a href="https://www.fh-aachen.de/" title="Algotracosa" id="page_6" onmouseover="dropdown(6)" onmouseout="window.clearTimeout(drop)">More</a></div>
         </div>
        
     </div>
 
-  <!--         Lo de la FH             -->
+	<!--         SEITE             -->
 
-<body>
 
-  <center><h1 class="tittle">Your dreamed car will be build soon</h1></br></center>
-  <center><img src="Figures/finalcar.jpg" alt="CUBE"/></center></br>
-  
-</body>
+<div id="SEITE">
+
+	
+    <a href="testindex.php" id="logo" title="zur Startseite"></a>
+
+            <div id="MAIN" class="none">
+
+                <div id="MAINNAV">
+                    <span id="hilfsnavi_navigation" class="invisible">
+                        <a href="#hilfsnavi_inhalt">Seiten-Navigation überspringen</a>
+                    </span>
+                    
+
+         
+</div>
+
+
+ <div id="INHALT_MAIN">
+
+    <center><h1 class="tittle">The car of your dreams will be built soon</h1></br></center>
+
+ 	 <center><img src="Figures/finalcar.jpg" alt="CUBE"/></center></br>
+
+</div>  
+</div>  
+
+<div id="FOOTER">
+            <div id="BREADCRUMB_FOOTER">
+                
+            </div>
+            <div class="mobil" id="TOPNAV">
+                <h2>FH Direkt</h2><a href="kontakt/" title="Kontaktinformationen der FH Aachen">Kontakt/Hilfe</a><a href="hochschule/zentralverwaltung/dezernat-i-personal/stellenanzeigen/" title="Stellenanzeigen">Stellenanzeigen</a><a href="presse/" title="Presseinformationen der FH Aachen">Presse</a><a href="topnavi/telefonbuch/" title="Telefonbuch">Telefonbuch</a><a href="downloads/?no_cache=1" title="Formulare, Flyer, Broschüren, Informationen, ...">Downloads</a>
+            </div>
+            <div id="INHALT_FOOTER">
+			
+	<div class="SOCIAL">  
+		<div>
+			<a href="https://www.facebook.com/profile.php?id=100011965921173" target="_blank">
+				<img border="0" height="52" width="178" src="Figures/fb.png">
+			</a>
+		</div>
+	</div>
+
+                <div class="STD NO_1">
+    <!--  CONTENT ELEMENT, uid:43/text [begin] -->
+        <div id="c43" class="csc-default">
+        <!--  Header: [begin] -->
+            <div class="csc-header csc-header-n1"><h2 class="csc-firstHeader">Kontakt</h2></div>
+        <!--  Header: [end] -->
+            
+        <!--  Text: [begin] -->
+            <p class="bodytext"><b>FH Aachen<br></b>Postfach 100 560<br>52005 Aachen<br>T +49.241.6009 0<br>F +49.241.6009 51090</p>
+        <!--  Text: [end] -->
+            </div>
+    <!--  CONTENT ELEMENT, uid:43/text [end] -->
+        </div>
+               
+            </div>
+
+
+        <div style="clear: both;"></div>
+        </div>
+
+
+<!-- Close <div> of SEITE -->
+</div>
+<!-- Close <div> of PAGE -->
+</div>
+
+
+		
+	</body>
+
+
 
 </html>

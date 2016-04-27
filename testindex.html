@@ -17,13 +17,13 @@
     <BUTTONBAR id="BUTTONBAR">
         <div id="language" title="Language">
         
-			 <a href="Contact.php" class="lang">
+			 <a href="testindex.php" class="lang">
             <img src="Figures/english.png" width="30" height="20" >
             </a>
-            <a href="Contact_es.php" class="lang">
+            <a href="index_es.php" class="lang">
             <img src="Figures/espanol.png" width="30" height="20" >
             </a>
-            <a href="Contact_de.php" class="lang">
+            <a href="index_de.php" class="lang">
             <img src="Figures/deutsch.png" width="30" height="20" >
             </a>
 
@@ -96,13 +96,13 @@
         
         <div id="SPRACHE">
             <span id="hilfsnavi_sprachwahl" class="invisible"><a href="#hilfsnavi_suche">Sprachumschaltung &uuml;berspringen</a></span>
-            <a href="Contact.php" class="lang">
+            <a href="testindex.php" class="lang">
             <img src="Figures/english.png" width="30" height="20" >
             </a>
-            <a href="Contact_es.php" class="lang">
+            <a href="index_es.php" class="lang">
             <img src="Figures/espanol.png" width="30" height="20" >
             </a>
-            <a href="Contact_de.php" class="lang">
+            <a href="index_de.php" class="lang">
             <img src="Figures/deutsch.png" width="30" height="20" >
             </a>
         </div>
@@ -124,7 +124,7 @@
 <div id="SEITE">
 
 	
-    <a href="testindex.php" id="logo" title="zur Startseite"></a>
+    <a href="testindex.html" id="logo" title="zur Startseite"></a>
 
             <div id="MAIN" class="none">
 
@@ -133,15 +133,123 @@
                         <a href="#hilfsnavi_inhalt">Seiten-Navigation überspringen</a>
                     </span>
                     <ul id="BREADCRUMB_MAIN"> 
-                        <li style="color:#00b5ad;"> Contact </li>
+                        <li style="color:#00b5ad;"> Create a new user </li>
                     </ul>
 
            <ul id="SEITENNAV"> 
 
-            <li>Alfonso Castro Medina</li>
-            <li>Armando Ren&eacute; Narv&aacute;es Contreras</li>
-            <li>Hilario Salom&oacute;n Galv&aacute;n Guzm&aacute;n</li>
-            <li>Salvador Jimenez Juarez</li>
+	<div id="dom-target" style="display: none;">
+<?php
+// define variables and set to empty values
+$name = $email = "";
+$maximo=0;
+
+	$servername = "localhost";
+	$username = "root";
+	$password = "projectcube";
+	$dbname = "project2";
+	
+	// Create connection
+$conn = new mysqli($servername, $username, $password, $dbname);
+// Check connection
+if ($conn->connect_error) {
+    die("Connection failed: " . $conn->connect_error);
+} 
+
+$sql = "SELECT OrderID FROM Orders";
+$result = $conn->query($sql);
+
+if ($result->num_rows > 0) {
+    // output data of each row
+    while($row = $result->fetch_assoc()) {
+        
+		$maximo=$maximo+1;
+    }
+	echo "OrderID: " . $maximo. "<br>";
+} else {
+    echo "0 results";
+}
+$conn->close();
+
+	if($row["identifier"]== $stock)
+		{echo $row["stock"]."<br>";}
+
+if ($_SERVER["REQUEST_METHOD"] == "POST") {
+   $name = test_input($_POST["name"]);
+   $email = test_input($_POST["email"]);
+   
+	$servername = "localhost";
+	$username = "root";
+	$password = "projectcube";
+	$dbname = "project2";
+	$last_id = $conn->insert_id;
+    //echo "New record created successfully. Last inserted ID is: " . $last_id;	
+	
+	// Create connection
+	$conn = new mysqli($servername, $username, $password, $dbname);    
+	// Check connection
+	if ($conn->connect_error) {
+		die("Connection failed: " . $conn->connect_error);
+	} 
+	// Write data in table
+	$sql = "INSERT INTO Users (email,Name)
+	VALUES ('$email', '$name')";
+
+	if ($conn->query($sql) === TRUE) {
+    echo "New record created successfully";
+	} else {
+		echo "Error: " . $sql . "<br>" . $conn->error;
+	}
+	
+	
+	 $sql = "INSERT INTO Orders (UserName,Status,OrderDate)
+	VALUES ('$name','pending',NOW())";
+
+	if ($conn->query($sql) === TRUE) {
+	$last_id = $conn->insert_id;
+    echo "New record created successfully. Last inserted ID is: " . $last_id;	
+	} else {
+    echo "Error: " . $sql . "<br>" . $conn->error;
+	}	
+
+
+?>
+    <!--  <script type="text/javascript">
+window.location = "build.php";
+</script>    -->
+<?php
+
+	$conn->close();	
+}
+
+
+function test_input($data) {
+   $data = trim($data);
+   $data = stripslashes($data);
+   $data = htmlspecialchars($data);
+   return $data;
+}
+?>
+</div>
+
+
+<!-- <script>
+    var div = document.getElementById("dom-target");
+    var myData = div.textContent;
+	//alert("myData = " + myData);
+</script> */-->
+
+ 
+
+<!--<h2>PHP Form Validation</h2> -->
+
+
+<form method="post" action="<?php echo htmlspecialchars($_SERVER["PHP_SELF"]);?>">
+   <li> Name: <input type="text" name="name"></li>
+   <li> E-mail: <input type="text" name="email"> </li>
+   <input type="submit" name="submit" value="GO!" >
+   
+</form>
 
   </ul> 
 
@@ -150,9 +258,9 @@
 
  <div id="INHALT_MAIN">
 
-    <center><h1 class="tittle">Contact</h1></br></center>
+    <center><h1 class="tittle">FH Aachen Manufacturing Cube</h1></br></center>
 
-  You can contact us in the and the profesor at the FH Aachen in the building of Goethestra&szlig;e, in the cafeteria or around the building you can always look for some mexicans who are something like indian people or arabian but something diferent.
+ 	 <center><img src="Figures/cube.png" alt="CUBE"/></center></br>
 
 </div>  
 
@@ -164,14 +272,6 @@
                 <h2>FH Direkt</h2><a href="kontakt/" title="Kontaktinformationen der FH Aachen">Kontakt/Hilfe</a><a href="hochschule/zentralverwaltung/dezernat-i-personal/stellenanzeigen/" title="Stellenanzeigen">Stellenanzeigen</a><a href="presse/" title="Presseinformationen der FH Aachen">Presse</a><a href="topnavi/telefonbuch/" title="Telefonbuch">Telefonbuch</a><a href="downloads/?no_cache=1" title="Formulare, Flyer, Broschüren, Informationen, ...">Downloads</a>
             </div>
             <div id="INHALT_FOOTER">
-			
-	<div class="SOCIAL">  
-		<div>
-			<a href="https://www.facebook.com/profile.php?id=100011965921173" target="_blank">
-				<img border="0" height="52" width="178" src="Figures/fb.png">
-			</a>
-		</div>
-	</div>
 
                 <div class="STD NO_1">
     <!--  CONTENT ELEMENT, uid:43/text [begin] -->
@@ -188,6 +288,7 @@
         </div>
                
             </div>
+
 
         <div style="clear: both;"></div>
         </div>

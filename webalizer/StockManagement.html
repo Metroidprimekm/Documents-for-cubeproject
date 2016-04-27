@@ -3,7 +3,7 @@
 <html>
 <head>
 	<!--         Lo de la FH             -->
-<link rel="stylesheet" type"text/css" href="Styles/styles.css" />
+<!-- <link rel="stylesheet" type"text/css" href="Styles/styles.css" /> -->
 <title>Eng_FH Aachen: Manufacturing Cube/Index</title>
 
 <link rel="stylesheet" type="text/css" href="https://www.fh-aachen.de/typo3temp/stylesheet_0ade94ab98.css?1448379798" media="all" />
@@ -11,19 +11,19 @@
 
 </head>
 
-<body>
+<body onload="Part_6048907()">
 
 <div id="PAGE">
     <BUTTONBAR id="BUTTONBAR">
         <div id="language" title="Language">
         
-			 <a href="Contact.php" class="lang">
+			 <a href="testindex.php" class="lang">
             <img src="Figures/english.png" width="30" height="20" >
             </a>
-            <a href="Contact_es.php" class="lang">
+            <a href="index_es.php" class="lang">
             <img src="Figures/espanol.png" width="30" height="20" >
             </a>
-            <a href="Contact_de.php" class="lang">
+            <a href="index_de.php" class="lang">
             <img src="Figures/deutsch.png" width="30" height="20" >
             </a>
 
@@ -88,43 +88,41 @@
                 $("#accordion_"+id+"_gross_B").hide(0);
             }
         </script>
+<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
+<script  type="text/javascript" src="AjaxStock.js"></script>
         
         <div id="TOPNAV"><span id="hilfsnavi_topnavi" class="invisible"><a href="#hilfsnavi_sprachwahl">Top-Navigation &uuml;berspringen</a></span>
-            <a href="testindex.php" title="Home">Home</a><a href="Contact.html" title="Contact">Contact</a><a href="About_us.html" title="about us">About us</a>
+            <a href="testindex.php" title="Home">Home</a><a href="" title="Contact">Contact</a><a href="#" title="about us">About us</a>
         </div>
 
         
         <div id="SPRACHE">
             <span id="hilfsnavi_sprachwahl" class="invisible"><a href="#hilfsnavi_suche">Sprachumschaltung &uuml;berspringen</a></span>
-            <a href="Contact.php" class="lang">
+            <a href="testindex.php" class="lang">
             <img src="Figures/english.png" width="30" height="20" >
             </a>
-            <a href="Contact_es.php" class="lang">
+            <a href="index_es.php" class="lang">
             <img src="Figures/espanol.png" width="30" height="20" >
             </a>
-            <a href="Contact_de.php" class="lang">
+            <a href="index_de.php" class="lang">
             <img src="Figures/deutsch.png" width="30" height="20" >
             </a>
         </div>
-            
-            
-        
+
 
         <div id="HEADNAV">
             <span id="hilfsnavi_headnavi" class="invisible"><a href="#hilfsnavi_navigation">Haupt-Navigation &uuml;berspringen</a></span>
             <div id="START" class="passiv"><a href="https://www1.fh-aachen.de" title="Startseite">Startseite</a></div>
-            <div class="passiv"><a href="testindex.php" title="Home" id="page_3" onmouseover="dropdown(3)" onmouseout="window.clearTimeout(drop)">Home icon</a></div><div class="passiv"><a href="About_us.html" title="Info" id="page_4" onmouseover="dropdown(4)" onmouseout="window.clearTimeout(drop)">About us</a></div><div class="passiv"><a href="Contact.html" title="contact" id="page_5" onmouseover="dropdown(5)" onmouseout="window.clearTimeout(drop)">Contact</a></div><div class="passiv"><a href="https://www.fh-aachen.de/" title="Algotracosa" id="page_6" onmouseover="dropdown(6)" onmouseout="window.clearTimeout(drop)">More</a></div>
+            <div class="passiv"><a href="testindex.php" title="Home" id="page_3" onmouseover="dropdown(3)" onmouseout="window.clearTimeout(drop)">Home icon</a></div><div class="passiv"><a href="#" title="Info" id="page_4" onmouseover="dropdown(4)" onmouseout="window.clearTimeout(drop)">About us</a></div><div class="passiv"><a href="#" title="contact" id="page_5" onmouseover="dropdown(5)" onmouseout="window.clearTimeout(drop)">Contact</a></div><div class="passiv"><a href="#" title="Algotracosa" id="page_6" onmouseover="dropdown(6)" onmouseout="window.clearTimeout(drop)">More</a></div>
         </div>
        
     </div>
 
 	<!--         SEITE             -->
 
+<div id="SEITE">	
 
-<div id="SEITE">
-
-	
-    <a href="testindex.php" id="logo" title="zur Startseite"></a>
+    <a href="testindex.html" id="logo" title="zur Startseite"></a>
 
             <div id="MAIN" class="none">
 
@@ -133,28 +131,74 @@
                         <a href="#hilfsnavi_inhalt">Seiten-Navigation überspringen</a>
                     </span>
                     <ul id="BREADCRUMB_MAIN"> 
-                        <li style="color:#00b5ad;"> Contact </li>
+                        <li style="color:#00b5ad;"> Choosed Lego Stock </li>
                     </ul>
 
-           <ul id="SEITENNAV"> 
+            <ul id="SEITENNAV">
+			<font size="2">
 
-            <li>Alfonso Castro Medina</li>
-            <li>Armando Ren&eacute; Narv&aacute;es Contreras</li>
-            <li>Hilario Salom&oacute;n Galv&aacute;n Guzm&aacute;n</li>
-            <li>Salvador Jimenez Juarez</li>
+                    <img src="" id="img"> 
+                    Stock:<a id="results_box"></a>&nbsp; </font>
+					<a onclick='Add()' href="#"><img src="Figures/flechaup.png" /></a>
+					<a onclick='Substract()' href="#"><img src="Figures/flechadown.png" /></a>
+					
 
-  </ul> 
+<!--             <form>
+                <label for="age">
+                    I am   
+                    <input type="number" name="age" id=""
+                        min="0" max="120" step="1" value="18">
+                    years old
+                </label>
+            </form> -->
+
+            </ul> 
 
 </div>
-</div>
 
- <div id="INHALT_MAIN">
 
-    <center><h1 class="tittle">Contact</h1></br></center>
+ <div id="INHALT_MAIN"><center>
 
-  You can contact us in the and the profesor at the FH Aachen in the building of Goethestra&szlig;e, in the cafeteria or around the building you can always look for some mexicans who are something like indian people or arabian but something diferent.
+    <div class="csc-header csc-header-n1"><h1 class="csc-firstHeader">Stock Management</h1></div>
+
+    
+
+    <a onclick = 'Part_6048907()'><img src="Figures/bar_codes/6048907.png"></a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+    <a onclick = 'Part_6048908()'><img src="Figures/bar_codes/6048908.png"></a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+    <a onclick = 'Part_6048909()'><img src="Figures/bar_codes/6048909.png"></a> </br></br>
+
+    <a onclick = 'Part_343721()'><img src="Figures/bar_codes/343721.png"></a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+    <a onclick = 'Part_343724()'><img src="Figures/bar_codes/343724.png"></a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+	<a onclick = 'Part_4168579()'><img src="Figures/bar_codes/4168579.png"></a></br></br>
+	
+	<a onclick = 'Part_301121()'><img src="Figures/bar_codes/301121.png"></a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+	<a onclick = 'Part_4167177()'><img src="Figures/bar_codes/4167177.png"></a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+    <a onclick = 'Part_4166923()'><img src="Figures/bar_codes/4166923.png"></a></br></br>
+	
+	<a onclick = 'Part_4160152()'><img src="Figures/bar_codes/4160152.png"></a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+	<a onclick = 'Part_6023087()'><img src="Figures/bar_codes/6023087.png"></a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+    <a onclick = 'Part_4170795()'><img src="Figures/bar_codes/4170795.png"></a></br></br>
+
+	<a onclick = 'Part_6004947()'><img src="Figures/bar_codes/6004947.png"></a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+    <a onclick = 'Part_4541728()'><img src="Figures/bar_codes/4541728.png"></a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+    <a onclick = 'Part_4652863()'><img src="Figures/bar_codes/4652863.png"></a></br></br>
+   
+	<a onclick = 'Part_6020150()'><img src="Figures/bar_codes/6020150.png"></a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+    <a onclick = 'Part_6020110()'><img src="Figures/bar_codes/6020110.png"></a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+    <a onclick = 'Part_6020134()'><img src="Figures/bar_codes/6020134.png"></a></br></br>
+	
+    <a onclick = 'Part_6020412()'><img src="Figures/bar_codes/6020412.png"></a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+    <a onclick = 'Part_6030817()'><img src="Figures/bar_codes/6030817.png"></a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+    <a onclick = 'Part_6025187()'><img src="Figures/bar_codes/6025187.png"></a></br></br>
+	
+	<a onclick = 'Part_6001240()'><img src="Figures/bar_codes/6001240.png"></a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+	<a onclick = 'Part_4247780()'><img src="Figures/bar_codes/4247780.png"></a>
+</center>
 
 </div>  
+</div>
+
+<!-- FOOTER -->
 
 <div id="FOOTER">
             <div id="BREADCRUMB_FOOTER">
@@ -163,15 +207,8 @@
             <div class="mobil" id="TOPNAV">
                 <h2>FH Direkt</h2><a href="kontakt/" title="Kontaktinformationen der FH Aachen">Kontakt/Hilfe</a><a href="hochschule/zentralverwaltung/dezernat-i-personal/stellenanzeigen/" title="Stellenanzeigen">Stellenanzeigen</a><a href="presse/" title="Presseinformationen der FH Aachen">Presse</a><a href="topnavi/telefonbuch/" title="Telefonbuch">Telefonbuch</a><a href="downloads/?no_cache=1" title="Formulare, Flyer, Broschüren, Informationen, ...">Downloads</a>
             </div>
+
             <div id="INHALT_FOOTER">
-			
-	<div class="SOCIAL">  
-		<div>
-			<a href="https://www.facebook.com/profile.php?id=100011965921173" target="_blank">
-				<img border="0" height="52" width="178" src="Figures/fb.png">
-			</a>
-		</div>
-	</div>
 
                 <div class="STD NO_1">
     <!--  CONTENT ELEMENT, uid:43/text [begin] -->
@@ -188,6 +225,7 @@
         </div>
                
             </div>
+
 
         <div style="clear: both;"></div>
         </div>

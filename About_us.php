@@ -17,13 +17,13 @@
     <BUTTONBAR id="BUTTONBAR">
         <div id="language" title="Language">
         
-			 <a href="testindex.php" class="lang">
+			 <a href="About_us.php" class="lang">
             <img src="Figures/english.png" width="30" height="20" >
             </a>
-            <a href="index_es.php" class="lang">
+            <a href="About_us_es.php" class="lang">
             <img src="Figures/espanol.png" width="30" height="20" >
             </a>
-            <a href="index_de.php" class="lang">
+            <a href="About_us_de.php" class="lang">
             <img src="Figures/deutsch.png" width="30" height="20" >
             </a>
 
@@ -96,13 +96,13 @@
         
         <div id="SPRACHE">
             <span id="hilfsnavi_sprachwahl" class="invisible"><a href="#hilfsnavi_suche">Sprachumschaltung &uuml;berspringen</a></span>
-            <a href="testindex.php" class="lang">
+            <a href="About_us.php" class="lang">
             <img src="Figures/english.png" width="30" height="20" >
             </a>
-            <a href="index_es.php" class="lang">
+            <a href="About_us_es.php" class="lang">
             <img src="Figures/espanol.png" width="30" height="20" >
             </a>
-            <a href="index_de.php" class="lang">
+            <a href="About_us_de.php" class="lang">
             <img src="Figures/deutsch.png" width="30" height="20" >
             </a>
         </div>
@@ -124,7 +124,7 @@
 <div id="SEITE">
 
 	
-    <a href="testindex.html" id="logo" title="zur Startseite"></a>
+    <a href="testindex.php" id="logo" title="zur Startseite"></a>
 
             <div id="MAIN" class="none">
 

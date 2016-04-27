@@ -1,69 +1,23 @@
 <! DOCTYPE html>
 
 <html>
-
 <head>
-  <link rel="stylesheet" type"text/css" href="styles.css" />
-  <link rel="stylesheet" href="style-test.css" />
-
-  
-  <title>Manufacturing Cube</title>
-  
-  </head>
-
- <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-<!-- 
-  This website is powered by TYPO3 - inspiring people to share!
-  TYPO3 is a free open source Content Management Framework initially created by Kasper Skaarhoj and licensed under GNU/GPL.
-  TYPO3 is copyright 1998-2015 of Kasper Skaarhoj. Extensions are copyright of their respective owners.
-  Information and contribution at http://typo3.org/
--->
-
-
-<title>Deu_FH Aachen Manufacturing Cube</title>
-<meta name="generator" content="TYPO3 CMS" />
-<meta name="KEYWORDS" content="FH Aachen, Fachhochschule Aachen, FH, Fachhochschule, Aachen, Universität, Vorlesung, Lehre" />
-<meta name="DESCRIPTION" content="FH Aachen" />
-<meta name="ABSTRACT" content="FH Aachen" />
-
+    <!--         Lo de la FH             -->
+<link rel="stylesheet" type"text/css" href="Styles/styles.css" />
+<title>Eng_FH Aachen: Manufacturing Cube/Index</title>
 
 <link rel="stylesheet" type="text/css" href="https://www.fh-aachen.de/typo3temp/stylesheet_0ade94ab98.css?1448379798" media="all" />
 <link rel="stylesheet" type="text/css" href="https://www.fh-aachen.de/fileadmin/template/css/fh.css?1450189426" media="all" />
 
-
-<script src="https://www.fh-aachen.de/typo3temp/javascript_9a38f34785.js?1448379647" type="text/javascript"></script>
-
-
-
-<meta http-equiv="X-UA-Compatible" content="IE=edge"/>
-<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no"><link rel="alternate" type="application/rss+xml" title="RSS-Feed" href="https://www.fh-aachen.de/rss/?type=100"/><script>
-  (function() {
-    var cx = '002441254131702830721:WMX-312018992';
-    var gcse = document.createElement('script'); 
-    gcse.type = 'text/javascript'; 
-    gcse.async = true;
-    gcse.src = (document.location.protocol == 'https:' ? 'https:' : 'http:') +
-        '//www.google.com/cse/cse.js?cx=' + cx;
-    var s = document.getElementsByTagName('script')[0]; 
-    s.parentNode.insertBefore(gcse, s);
-  })();
-</script>  <meta name="google-site-verification" content="kH_RxWSIyv4E1jM5_6lCC7A48p7qGijNkOHLAuAeVDo" />   <script src="https://www.fh-aachen.de/fileadmin/scripts/jquery.min.js" type="text/javascript"></script>
-   <script src="https://www.fh-aachen.de/fileadmin/scripts/jquery-ui.min.js" type="text/javascript"></script>    <script src="https://www.fh-aachen.de/fileadmin/template/scripts.js" type="text/javascript"></script>
-    <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
-    <link rel="alternate" type="application/rss+xml" title="RSS-Feed" href="https://www.fh-aachen.de/rss/?type=100"/>
-    <link href="https://www.fh-aachen.de/fileadmin/template/pics/favicon.ico" rel="shortcut icon" type="image/x-icon" />
-
-
-<script type="text/javascript">var TYPO3FrontendLoginFormRsaEncryptionPublicKeyUrl = 'index.php?eID=FrontendLoginRsaPublicKey';</script><script type="text/javascript" src="https://www.fh-aachen.de/typo3/sysext/rsaauth/resources/jsbn/jsbn.js"></script><script type="text/javascript" src="https://www.fh-aachen.de/typo3/sysext/rsaauth/resources/jsbn/prng4.js"></script><script type="text/javascript" src="https://www.fh-aachen.de/typo3/sysext/rsaauth/resources/jsbn/rng.js"></script><script type="text/javascript" src="https://www.fh-aachen.de/typo3/sysext/rsaauth/resources/jsbn/rsa.js"></script><script type="text/javascript" src="https://www.fh-aachen.de/typo3/sysext/rsaauth/resources/jsbn/base64.js"></script><script type="text/javascript" src="https://www.fh-aachen.de/typo3/sysext/rsaauth/resources/FrontendLoginFormRsaEncryption.min.js"></script>
 </head>
-<body>
 
+<body>
 
 <div id="PAGE">
     <BUTTONBAR id="BUTTONBAR">
         <div id="language" title="Language">
         
-       <a href="ending.php" class="lang">
+             <a href="ending.php" class="lang">
             <img src="Figures/english.png" width="30" height="20" >
             </a>
             <a href="ending_es.php" class="lang">
@@ -135,36 +89,10 @@
             }
         </script>
         
-     
-      
         <div id="TOPNAV"><span id="hilfsnavi_topnavi" class="invisible"><a href="#hilfsnavi_sprachwahl">Top-Navigation &uuml;berspringen</a></span>
-            <a href="index_de.php" title="Home">Home</a><a href="kontakt/" title="Contact">Kontact</a><a href="#" title="about us">&Uuml;ber uns</a>
+            <a href="index_de.php" title="Home">Home</a><a href="Contact_de.php" title="Contact">Kontact</a><a href="About_us_de.php" title="about us">&Uuml;ber uns </a>
         </div>
-        <div id="LOGIN">    
-            <a style="cursor:pointer" title="Öffnet die Login-Box" onclick="document.loginbutton.submit()">Login</a><form style="visibility:hidden" action="/" name="loginbutton" method="post"><input type="hidden" name="995F472B" value="2060A5A289FD684BAD2756C18F7E4393"><input type="hidden" name="login" value="1"></form>
-            <div class="loginbox" id="LoginBox" onclick="document.getElementById('LoginBox').style.visibility='hidden';document.getElementById('LoginFrame').style.visibility='hidden'"></div><div class="loginframe" id="LoginFrame"><div class="content" >
 
-  <div class="tx-felogin-pi1">
-    
-<script language="javascript">
-  if ("<div></div>">"" && "<div></div>"!="<div></div>") {
-    text="<div></div>";
-    text=text.substr(5);
-    p=text.search(/<\/div>/);
-    text=text.substr(0,p);
-    alert(text);
-  }
-</script>
-
-
-  </div>
-  
-  <!-- END: Content of extension "felogin", plugin "tx_felogin_pi1" -->
-
-  </div></div>
-            
-        </div>
-        
         <div id="SPRACHE">
             <span id="hilfsnavi_sprachwahl" class="invisible"><a href="#hilfsnavi_suche">Sprachumschaltung &uuml;berspringen</a></span>
             <a href="ending.php" class="lang">
@@ -177,25 +105,87 @@
             <img src="Figures/deutsch.png" width="30" height="20" >
             </a>
         </div>
-
+            
         <div id="HEADNAV">
             <span id="hilfsnavi_headnavi" class="invisible"><a href="#hilfsnavi_navigation">Haupt-Navigation &uuml;berspringen</a></span>
             <div id="START" class="passiv"><a href="https://www1.fh-aachen.de" title="Startseite">Startseite</a></div>
-            <div class="passiv"><a href="index_de.php" title="Home" id="page_3" onmouseover="dropdown(3)" onmouseout="window.clearTimeout(drop)">Home icon</a></div><div class="passiv"><a href="fachbereiche/" title="Die Fachbereiche der FH Aachen" id="page_4" onmouseover="dropdown(4)" onmouseout="window.clearTimeout(drop)">&Uuml;ber uns</a></div><div class="passiv"><a href="hochschule/" title="Informationen zur FH Aachen" id="page_5" onmouseover="dropdown(5)" onmouseout="window.clearTimeout(drop)">Kontact</a></div><div class="passiv"><a href="hochschule/zentralverwaltung/dezernat-v-innovationstransfer/" title="Informationen zu Forschungsprojekten der FH Aachen" id="page_6" onmouseover="dropdown(6)" onmouseout="window.clearTimeout(drop)">Mehr</a></div>
+            <div class="passiv"><a href="index_de.php" title="Home" id="page_3" onmouseover="dropdown(3)" onmouseout="window.clearTimeout(drop)">Home</a></div><div class="passiv"><a href="About_us.html" title="Info" id="page_4" onmouseover="dropdown(4)" onmouseout="window.clearTimeout(drop)">&Uuml;ber uns </a></div><div class="passiv"><a href="Contact_de.php" title="contact" id="page_5" onmouseover="dropdown(5)" onmouseout="window.clearTimeout(drop)">Kontact</a></div><div class="passiv"><a href="https://www.fh-aachen.de/" title="Algotracosa" id="page_6" onmouseover="dropdown(6)" onmouseout="window.clearTimeout(drop)">Mehr</a></div>
         </div>
        
     </div>
 
+    <!--         SEITE             -->
 
-  <!--         Lo de la FH             -->
 
-<body>
+<div id="SEITE">
 
-  <center><h1 class="tittle">Ihres Taumauto wird gebaut</h1></br></center>
-  <center><img src="Figures/finalcar.jpg" alt="CUBE"/></center></br>
-  
+    
+    <a href="index_de.php" id="logo" title="zur Startseite"></a>
 
-</body>
+            <div id="MAIN" class="none">
+
+                <div id="MAINNAV">
+                    <span id="hilfsnavi_navigation" class="invisible">
+                        <a href="#hilfsnavi_inhalt">Seiten-Navigation überspringen</a>
+                    </span>
+
+</div>
+
+
+ <div id="INHALT_MAIN">
+
+    <center><h1 class="tittle">Ihres Traumauto wird bald gebaut werden</h1></br></center>
+
+     <center><img src="Figures/finalcar.jpg" alt="CUBE"/></center></br>
+
+</div>  
+
+<div id="FOOTER">
+            <div id="BREADCRUMB_FOOTER">
+                
+            </div>
+            <div class="mobil" id="TOPNAV">
+                <h2>FH Direkt</h2><a href="kontakt/" title="Kontaktinformationen der FH Aachen">Kontakt/Hilfe</a><a href="hochschule/zentralverwaltung/dezernat-i-personal/stellenanzeigen/" title="Stellenanzeigen">Stellenanzeigen</a><a href="presse/" title="Presseinformationen der FH Aachen">Presse</a><a href="topnavi/telefonbuch/" title="Telefonbuch">Telefonbuch</a><a href="downloads/?no_cache=1" title="Formulare, Flyer, Broschüren, Informationen, ...">Downloads</a>
+            </div>
+            <div id="INHALT_FOOTER">
+			
+	<div class="SOCIAL">  
+		<div>
+			<a href="https://www.facebook.com/profile.php?id=100011965921173" target="_blank">
+				<img border="0" height="52" width="178" src="Figures/fb.png">
+			</a>
+		</div>
+	</div>
+
+                <div class="STD NO_1">
+    <!--  CONTENT ELEMENT, uid:43/text [begin] -->
+        <div id="c43" class="csc-default">
+        <!--  Header: [begin] -->
+            <div class="csc-header csc-header-n1"><h2 class="csc-firstHeader">Kontakt</h2></div>
+        <!--  Header: [end] -->
+            
+        <!--  Text: [begin] -->
+            <p class="bodytext"><b>FH Aachen<br></b>Postfach 100 560<br>52005 Aachen<br>T +49.241.6009 0<br>F +49.241.6009 51090</p>
+        <!--  Text: [end] -->
+            </div>
+    <!--  CONTENT ELEMENT, uid:43/text [end] -->
+        </div>
+               
+            </div>
+
+
+        <div style="clear: both;"></div>
+        </div>
+
+
+<!-- Close <div> of SEITE -->
+</div>
+<!-- Close <div> of PAGE -->
+</div>
+
+
+        
+    </body>
 
 
 

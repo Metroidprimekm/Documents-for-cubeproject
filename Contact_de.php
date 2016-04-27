@@ -90,7 +90,7 @@
         </script>
         
         <div id="TOPNAV"><span id="hilfsnavi_topnavi" class="invisible"><a href="#hilfsnavi_sprachwahl">Top-Navigation &uuml;berspringen</a></span>
-            <a href="testindex.php" title="Home">Home</a><a href="Contact.html" title="Contact">Contact</a><a href="About_us.html" title="about us">About us</a>
+            <a href="index_de.php" title="Home">Home</a><a href="Contact_de.html" title="Contact">Contact</a><a href="About_us_de.html" title="about us">About us</a>
         </div>
 
         
@@ -113,7 +113,7 @@
         <div id="HEADNAV">
             <span id="hilfsnavi_headnavi" class="invisible"><a href="#hilfsnavi_navigation">Haupt-Navigation &uuml;berspringen</a></span>
             <div id="START" class="passiv"><a href="https://www1.fh-aachen.de" title="Startseite">Startseite</a></div>
-            <div class="passiv"><a href="testindex.php" title="Home" id="page_3" onmouseover="dropdown(3)" onmouseout="window.clearTimeout(drop)">Home icon</a></div><div class="passiv"><a href="About_us.html" title="Info" id="page_4" onmouseover="dropdown(4)" onmouseout="window.clearTimeout(drop)">About us</a></div><div class="passiv"><a href="Contact.html" title="contact" id="page_5" onmouseover="dropdown(5)" onmouseout="window.clearTimeout(drop)">Contact</a></div><div class="passiv"><a href="https://www.fh-aachen.de/" title="Algotracosa" id="page_6" onmouseover="dropdown(6)" onmouseout="window.clearTimeout(drop)">More</a></div>
+            <div class="passiv"><a href="index_de.php" title="Home" id="page_3" onmouseover="dropdown(3)" onmouseout="window.clearTimeout(drop)">Home icon</a></div><div class="passiv"><a href="About_us_de.html" title="Info" id="page_4" onmouseover="dropdown(4)" onmouseout="window.clearTimeout(drop)">About us</a></div><div class="passiv"><a href="Contact_de.html" title="contact" id="page_5" onmouseover="dropdown(5)" onmouseout="window.clearTimeout(drop)">Contact</a></div><div class="passiv"><a href="https://www.fh-aachen.de/" title="Algotracosa" id="page_6" onmouseover="dropdown(6)" onmouseout="window.clearTimeout(drop)">More</a></div>
         </div>
        
     </div>
@@ -124,7 +124,7 @@
 <div id="SEITE">
 
 	
-    <a href="testindex.php" id="logo" title="zur Startseite"></a>
+    <a href="index_de.php" id="logo" title="zur Startseite"></a>
 
             <div id="MAIN" class="none">
 
@@ -152,7 +152,7 @@
 
     <center><h1 class="tittle">Contact</h1></br></center>
 
-  You can contact us in the and the profesor at the FH Aachen in the building of Goethestra&szlig;e, in the cafeteria or around the building you can always look for some mexicans who are something like indian people or arabian but something diferent.
+	Sie Konnen uns erreichen an der FH Aachen, wir sind normalerweise in der Goetherstra&szlig;e Gebeude, in der Mensa oder irdgenwo, Sie konnten die Mexikerner versuchen, wir sind wie Indiener oder Mittelorientischer Leute aber noch etwas andere.
 
 </div>  
 
