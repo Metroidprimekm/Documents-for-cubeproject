@@ -30,8 +30,8 @@ ok = !ok;
 	// la Figura 
 	var Figura;
 	var controls;
-	var Ancho=window.innerWidth*.45;
-	var Alto=window.innerHeight*.78;
+	var Ancho=window.innerWidth*.32;
+	var Alto=window.innerHeight*.6;
 	var Territorio;
 	var object;
 	var Angulo = 45;	
