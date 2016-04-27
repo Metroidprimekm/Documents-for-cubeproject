@@ -484,7 +484,11 @@ When you are finish of building your car, press the green arrow to go next. If w
     if (confirm('Are you sure that this is the car of your dreams?')) {
       window.location = "ending.php"; 
   }} else
+<<<<<<< HEAD
+	  alert("You must place at least a Chassis and two lego pieces")
+=======
 	 alert("You must place at least a Chassis and one lego pieces")
+>>>>>>> refs/remotes/Metroidprimekm/master
   });
   </script>
 
